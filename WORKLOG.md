@@ -1,21 +1,23 @@
 # Work Log
 
-## GROUP MEMBER 1
+## William
 
-### date x
+### 5/22/23
 
-info
+created decrpyter class, keyPressed branch, wrote keyPressed method
+started to rewrite CS plan
 
 ### date y
 
 info
 
 
-## GROUP MEMBER 2
+## Matthew
 
-### date x
+### 5/22/23
 
-info
+created encrpyer class and lastNineRGB method + branch
+started to rewrite CS plan
 
 ### date y
 
