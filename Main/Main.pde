@@ -4,3 +4,5 @@ void setup(){
   println(binary(42, 9));
   println(unbinary("000101010"));
 }
+
+void draw(){}
