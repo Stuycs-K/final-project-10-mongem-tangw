@@ -7,9 +7,10 @@
 created decrpyter class, keyPressed branch, wrote keyPressed method
 started to rewrite CS plan
 
-### date y
+### 5/23/23
 
-info
+updated keyPressed method
+redrafted methods in plan
 
 
 ## Matthew
