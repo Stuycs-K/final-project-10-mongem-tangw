@@ -17,5 +17,14 @@
           //println("AFTER: " + unbinary(binaryRed));
           pixels[position+i] = color(unbinary(binaryRed), unbinary(binaryGreen), unbinary(binaryBlue));
           
-      }
+      }    
+  }
+  
+  void fromStringToPicture(){
+    int stop = input.length();
+    int j=0;
+    for (int i=0; i<stop; i+=3){
+      changeNineRGB(source, i, input.charAt(j));
+      j++;
+    }
   }

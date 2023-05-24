@@ -14,7 +14,7 @@ void keyPressed(){
   // DO something with the String after enter
   if (key == ENTER){
     typed = true;
-  //  println(input);
+    println(input);
   }
 }
 
@@ -30,7 +30,4 @@ String lastNineRGB(PImage source, int position){
      
   }
   return result;
-}
-
-void fromStringToPicture(){
 }
