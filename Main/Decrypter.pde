@@ -5,6 +5,7 @@ Boolean typed = false;
 
 
 void keyPressed(){
+  // This ends the message once ENTER is hit
   if (!typed){
     if (key != ENTER){
       input += key;
