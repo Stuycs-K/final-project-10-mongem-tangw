@@ -9,8 +9,7 @@ started to rewrite CS plan
 
 ### 5/23/23
 
-updated keyPressed method
-redrafted methods in plan
+updated keyPressed method, redrafted methods in plan
 
 
 ## Matthew
