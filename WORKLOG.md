@@ -7,18 +7,18 @@
 created decrpyter class, keyPressed branch, wrote keyPressed method
 started to rewrite CS plan
 
-### date y
+### 5/23/23
 
-info
+updated keyPressed method, redrafted methods in plan
 
 
 ## Matthew
 
 ### 5/22/23
 
-created encrpyer class and lastNineRGB method + branch
+created encrypter class and lastNineRGB method + branch
 started to rewrite CS plan
 
-### date y
+### 5/23/23
 
-info
+added onto decrpyter class with lastNineRGB method, added and uploaded testing image, and edited main to compile
