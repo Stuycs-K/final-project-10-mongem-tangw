@@ -5,6 +5,7 @@ void setup(){
   //println(unbinary("000101010"));
    image(source,0,0);
    changeNineRGB(source, 0, 'a');
+   image(source,500,0);
 }
 
 void draw(){
