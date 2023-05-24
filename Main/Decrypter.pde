@@ -33,6 +33,4 @@ String lastNineRGB(PImage source, int position){
 }
 
 void fromStringToPicture(){
-  
-  // Update source
 }
