@@ -22,3 +22,9 @@ started to rewrite CS plan
 ### 5/23/23
 
 added onto decrpyter class with lastNineRGB method, added and uploaded testing image, and edited main to compile
+
+### 5/24/23
+
+created a mouseClicked() mode selection method
+added onto the fromStringToPicture method to save an altered image to your computer as "output.png"
+added a label to notify user whichimage is original and which is modified
