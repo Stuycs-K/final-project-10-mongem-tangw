@@ -6,9 +6,12 @@
       for(int i = 0; i < 3; i++){
           //println("BEFORE: "+(int)red(pixels[position+i]));
           String binaryRed = binary((int)red(pixels[position+i]));
-          //println(binaryRed);
           String binaryGreen = binary((int)green(pixels[position+i]));
           String binaryBlue = binary((int)blue(pixels[position+i]));
+          println("ORIGINAL");
+          println(binaryRed);
+          println(binaryGreen);
+          println(binaryBlue);
           //println(binaryRed.substring(0,binaryRed.length()-1));
           binaryRed = binaryRed.substring(0,binaryRed.length()-1) + charBinary.substring(3*i, 3*i+1);
           //println(binaryRed);
@@ -16,7 +19,13 @@
           binaryBlue = binaryBlue.substring(0,binaryBlue.length()-1) + charBinary.substring(3*i+2, 3*i+3);
           //println("AFTER: " + unbinary(binaryRed));
           pixels[position+i] = color(unbinary(binaryRed), unbinary(binaryGreen), unbinary(binaryBlue));
-          
+          binaryRed = binary((int)red(pixels[position+i]));
+          binaryGreen = binary((int)green(pixels[position+i]));
+          binaryBlue = binary((int)blue(pixels[position+i]));
+          println("ALTERED");
+          println(binaryRed);
+          println(binaryGreen);
+          println(binaryBlue);
       }    
   }
   

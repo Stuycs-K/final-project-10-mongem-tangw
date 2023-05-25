@@ -49,7 +49,7 @@ void draw(){
       fromStringToPicture(loadImage("source.png"));
     }
     if(MODE == DECRYPTER){
-      return;
+      println(imageToString(loadImage("output.png"), 50));
     }
     println("---------");
   }

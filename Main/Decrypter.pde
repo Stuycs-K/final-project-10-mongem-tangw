@@ -5,6 +5,7 @@ Boolean typed = false;
 
 
 String lastNineRGB(PImage source, int position){
+  loadPixels();
   String result = "";
   for(int i = 0; i < 3; i++){
     int red = (int) red(pixels[position+i]);
@@ -20,7 +21,7 @@ String lastNineRGB(PImage source, int position){
  String imageToString(PImage output, int stringLength){
    String result = "";
    for(int i = 0; i < stringLength; i+=3){
-       result+=lastNineRGB(output, i);
+       result+=(char)unbinary(lastNineRGB(output, i));
    }
    return result;
  }
