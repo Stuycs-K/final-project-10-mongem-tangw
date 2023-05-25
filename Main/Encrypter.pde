@@ -1,4 +1,4 @@
-
+ 
   void changeNineRGB(PImage source, int position, char input){
     loadPixels();
       String charBinary = binary(input, 9);
@@ -20,11 +20,14 @@
       }    
   }
   
-  void fromStringToPicture(){
+  void fromStringToPicture(PImage source){
     int stop = input.length();
     int j=0;
     for (int i=0; i<stop; i+=3){
       changeNineRGB(source, i, input.charAt(j));
       j++;
     }
+    PImage output = createImage(source.width, source.height, RGB);
+    output = source.get();
+    output.save("output.png");
   }

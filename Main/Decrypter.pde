@@ -1,5 +1,4 @@
 
-PImage source;
 String input = "";
 Boolean typed = false;
 
