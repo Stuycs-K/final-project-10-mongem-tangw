@@ -42,5 +42,15 @@ void keyPressed(){
 
 
 void draw(){
+  if(keyPressed && key == ENTER){
+    println(MODE);
+    if(MODE == ENCRYPTER){
+      fromStringToPicture(loadImage("source.png"));
+    }
+    if(MODE == DECRYPTER){
+      return;
+    }
+    println("---------");
+  }
 
 }
