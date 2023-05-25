@@ -17,3 +17,10 @@ String lastNineRGB(PImage source, int position){
   }
   return result;
 }
+ String imageToString(PImage output, int stringLength){
+   String result = "";
+   for(int i = 0; i < stringLength; i+=3){
+       result+=lastNineRGB(output, i);
+   }
+   return result;
+ }
