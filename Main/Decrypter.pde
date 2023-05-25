@@ -5,7 +5,6 @@ Boolean typed = false;
 
 
 
-
 String lastNineRGB(PImage source, int position){
   String result = "";
   for(int i = 0; i < 3; i++){
@@ -18,7 +17,4 @@ String lastNineRGB(PImage source, int position){
      
   }
   return result;
-}
-
-void fromStringToPicture(){
 }

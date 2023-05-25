@@ -8,6 +8,7 @@ void setup(){
   //println(binary(42, 9));
   //println(unbinary("000101010"));
    image(source,0,0);
+
    textSize(25);
    fill(100,100,100);
    text("Original Photo", 0, 20);
