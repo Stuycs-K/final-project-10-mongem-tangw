@@ -4,19 +4,6 @@ String input = "";
 Boolean typed = false;
 
 
-void keyPressed(){
-  // This ends the message once ENTER is hit
-  if (!typed){
-    if (key != ENTER){
-      input += key;
-    }
-  }
-  // DO something with the String after enter
-  if (key == ENTER){
-    typed = true;
-    println(input);
-  }
-}
 
 String lastNineRGB(PImage source, int position){
   String result = "";
