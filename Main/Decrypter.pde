@@ -20,7 +20,7 @@ String lastNineRGB(PImage source, int position){
 }
  String imageToString(PImage output, int stringLength){
    String result = "";
-   for(int i = 0; i < stringLength; i+=3){
+   for(int i = 0; i < stringLength*3; i+=3){
        result+=(char)unbinary(lastNineRGB(output, i));
    }
    return result;
