@@ -1,6 +1,7 @@
 int ENCRYPTER = 0;
 int DECRYPTER = 1;
 int MODE = 0;
+int DECRYPTLENGTH = 50;
 
 void setup(){
   size(1024,1024);
@@ -95,7 +96,7 @@ void draw(){
      text("in your processing files", 640, height/8+80);
     }
     if(MODE == DECRYPTER){
-      String result = imageToString(loadImage("output.png"), 50);
+      String result = imageToString(loadImage("output.png"), DECRYPTLENGTH);
       textSize(20);
       fill(48,165,194);
       rect(524, height/4, 512,512);
