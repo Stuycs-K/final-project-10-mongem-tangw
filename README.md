@@ -8,6 +8,7 @@ Period 10
 An Image encrypter and decrypter! AKA as steganography.
 ## Instructions
 We have uploaded a premade image to both encrypt and decrypt for the sake of the MVP presentation, however, if you wish to use this on your own, please follow these instructions:
+
 Remove "source.png"  within the DATA folder and replace it with your own file you wish to encrypt. Must be 512x512 pixels MAX and a PNG. Keep the placeholder "output.png" for now as it is required for the code to run.
 Following the onscreen instructions to encrypt your photo. Click your mouse button until you reach the encryption screen. It will tell you to type out what you wish to encrypt. 
 For the time being, only lowercase and basic punctuation can be accepted. Backspace, SHIFT, ALT, etc, wont break the code, but WILL make the message harder to read. 
