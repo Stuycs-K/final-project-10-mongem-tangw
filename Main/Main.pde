@@ -4,29 +4,16 @@ int MODE = 0;
 
 void setup(){
   size(1024,1024);
-  //PImage source = loadImage("source.png");
-  PImage output = loadImage("output.png");
-  //println(binary(42, 9));
-  //println(unbinary("000101010"));
-//image(source,0,height/4);
-
-   textSize(40);
-   fill(100,100,100);
-   //image(source,500,0);
-   //println(char(unbinary(lastNineRGB(source, 0))));
-   text("Please click mouse button", width/4, 900);
-   //println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa".length() + ""); 48
-   //println("a".substring(0,2));
-   
- 
-
+  textSize(40);
+  fill(100,100,100);
+  text("Please click mouse button", width/4, 900);
 }
 
 void mouseClicked(){
  MODE+=1;
  if(MODE==2)
  MODE=0;
- println(MODE + "");
+ //println(MODE + "");
 }
 
 void keyPressed(){
@@ -57,7 +44,7 @@ void keyPressed(){
   // DO something with the String after enter
   if (key == ENTER){
     typed = true;
-    println(input);
+    //println(input);
     
   }
   }
@@ -79,7 +66,8 @@ void draw(){
     fill(0,0,0);
     text("Please type what you wish to encrpyt.", width/5, 840);
     text("What you encrypt will be shown", width/5, 880);
-    text("on the right.", width/5, 920);
+    text("on the right. Press enter when done!", width/5, 920);
+
     }
     if(MODE==ENCRYPTER){
       fill(48, 165, 184);
@@ -97,7 +85,7 @@ void draw(){
     }
   }
   if(keyPressed && key == ENTER){
-    println(MODE);
+    //println(MODE);
     if(MODE == ENCRYPTER){
       image(fromStringToPicture(loadImage("source.png")), 512, height/4);
       textSize(40);
@@ -124,7 +112,6 @@ void draw(){
        text(result, 530, (height/4)+20); 
       }
     }
-    println("---------");
   }
 
 }
