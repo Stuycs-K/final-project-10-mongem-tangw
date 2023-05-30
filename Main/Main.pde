@@ -30,10 +30,10 @@ void keyPressed(){
       rect(524, height/4, 512,512);
       fill(0,0,0);
       if(input.length()>33){
-      text(input.substring(0, 33), 530, (height/4)+20); 
-      int limit = (input.length() % 33);
-      for(int i = 1; i < input.length()/33; i++){
-       text(input.substring(33*i, (33*i)+33), 530, (height/4)+(20*i)+20); 
+        text(input.substring(0, 33), 530, (height/4)+20); 
+        int limit = (input.length() % 33);
+        for(int i = 1; i < input.length()/33; i++){
+        text(input.substring(33*i, (33*i)+33), 530, (height/4)+(20*i)+20); 
       }
       text(input.substring(input.length()-limit, input.length()),530,(height/4)+(input.length()/33)*(20)+20);
       }
@@ -77,7 +77,7 @@ void draw(){
     textSize(40);
 
     }
-    if(MODE==ENCRYPTER){
+    else if(MODE==ENCRYPTER){
       fill(48, 165, 184);
       rect(128, 95, 280, 45);
       fill(100,100,100);
