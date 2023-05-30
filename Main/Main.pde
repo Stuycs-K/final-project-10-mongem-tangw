@@ -9,6 +9,7 @@ void setup(){
   textSize(40);
   fill(100,100,100);
   text("Please click mouse button", width/4, 900);
+  // Testing to see which branch this goes to
 }
 
 void mouseClicked(){
