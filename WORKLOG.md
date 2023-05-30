@@ -11,6 +11,18 @@ started to rewrite CS plan
 
 updated keyPressed method, redrafted methods in plan
 
+### 5/24/23
+
+created fromStringtoPicture method and ran it successfully in main
+
+### 5/25/23 - 5/28/23
+
+Was at the national debate tournament in Kentucky and was unable to work on the final project :(
+
+### 5/29/23
+
+Got up to date with the project, played around with the user interface, and outlined a problem with the UI that I will work on tomorrow.
+
 
 ## Matthew
 
@@ -21,7 +33,7 @@ started to rewrite CS plan
 
 ### 5/23/23
 
-added onto decrpyter class with lastNineRGB method, added and uploaded testing image, and edited main to compile
+added onto decrypter class with lastNineRGB method, added and uploaded testing image, and edited main to compile
 
 ### 5/24/23
 
