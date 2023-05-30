@@ -1,6 +1,6 @@
 int ENCRYPTER = 0;
 int DECRYPTER = 1;
-int CREATOR = 2;
+//int CREATOR = 2;
 int MODE = 0;
 int DECRYPTLENGTH = 50;
 
@@ -13,7 +13,7 @@ void setup(){
 
 void mouseClicked(){
  MODE+=1;
- if(MODE==3)
+ if(MODE==2)
  MODE=0;
  //println(MODE + "");
 }
