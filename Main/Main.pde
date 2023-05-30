@@ -1,5 +1,6 @@
 int ENCRYPTER = 0;
 int DECRYPTER = 1;
+int CREATOR = 2;
 int MODE = 0;
 int DECRYPTLENGTH = 50;
 
@@ -12,7 +13,7 @@ void setup(){
 
 void mouseClicked(){
  MODE+=1;
- if(MODE==2)
+ if(MODE==3)
  MODE=0;
  //println(MODE + "");
 }
@@ -64,10 +65,15 @@ void draw(){
     textSize(40);
     fill(48, 165, 184);
     rect(width/6, 800, 700, 150);
+    rect(40, 800, 120, 100);
     fill(0,0,0);
     text("Please type what you wish to encrypt.", width/5, 840);
     text("What you encrypt will be shown", width/5, 880);
     text("on the right. Press enter when done!", width/5, 920);
+    textSize(20);
+    text("Mode:", 45, 840);
+    text("encryption", 45, 860);
+    textSize(40);
 
     }
     if(MODE==ENCRYPTER){
@@ -80,9 +86,14 @@ void draw(){
     textSize(40);
     fill(48, 165, 184);
     rect(width/6, 800, 700, 150);
+    rect(40, 800, 120, 100);
     fill(0,0,0);
-    text("Please press enter to get encrypted", width/5, 840);
+    text("Please press enter to get decrypted", width/5, 840);
     text("message", width/5, 880);
+    textSize(20);
+    text("Mode:", 45, 840);
+    text("decryption", 45, 860);
+    textSize(40);
     }
   }
   if(keyPressed && key == ENTER){

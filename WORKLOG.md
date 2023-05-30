@@ -36,3 +36,10 @@ expanded draw() method by creating a UI, easier for the user to use and interact
 created a algorithm within keypressed and draw that print out what the user wishes to encrpyt as they are writing it
 cleaned up print statements
 
+### 5/26/23
+
+cleaned UI and edited confusing test
+
+### 5/29/2023
+
+started new CREATOR mode which creates an image based on input text (did not upload to main)
