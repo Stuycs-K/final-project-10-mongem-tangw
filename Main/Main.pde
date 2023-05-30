@@ -65,7 +65,7 @@ void draw(){
     fill(48, 165, 184);
     rect(width/6, 800, 700, 150);
     fill(0,0,0);
-    text("Please type what you wish to encrpyt.", width/5, 840);
+    text("Please type what you wish to encrypt.", width/5, 840);
     text("What you encrypt will be shown", width/5, 880);
     text("on the right. Press enter when done!", width/5, 920);
 
