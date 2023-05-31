@@ -65,7 +65,7 @@ void draw(){
     textSize(40);
     fill(48, 165, 184);
     rect(width/6, 800, 700, 150);
-    rect(40, 800, 120, 100);
+    rect(40,800,100,150);
     fill(0,0,0);
     text("Please type what you wish to encrpyt.", width/5, 840);
     text("What you encrypt will be shown", width/5, 880);
@@ -86,7 +86,7 @@ void draw(){
     textSize(40);
     fill(48, 165, 184);
     rect(width/6, 800, 700, 150);
-    rect(40, 800, 120, 100);
+    rect(40,800,100,150);
     fill(0,0,0);
     text("Please press enter to get decrypted", width/5, 840);
     text("message", width/5, 880);
@@ -118,6 +118,7 @@ void draw(){
   if(keyPressed && key == ENTER){
     //println(MODE);
     if(MODE == ENCRYPTER){
+      println("encrypt");
       image(fromStringToPicture(loadImage("source.png")), 512, height/4);
       textSize(40);
      fill(100,100,100);
@@ -126,6 +127,7 @@ void draw(){
      text("in your processing files", 640, height/8+80);
     }
     if(MODE == DECRYPTER){
+      println("decrypt");
       String result = imageToString(loadImage("output.png"), DECRYPTLENGTH);
       textSize(20);
       fill(48,165,194);
@@ -142,6 +144,9 @@ void draw(){
       else{
        text(result, 530, (height/4)+20); 
       }
+    }
+    if(MODE==CREATOR){
+     println("creator"); 
     }
   }
 
