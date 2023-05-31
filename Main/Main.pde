@@ -116,70 +116,15 @@ void keyPressed(){
 
 
 void draw(){
-  if(mousePressed){
-    //if(MODE==DECRYPTER){
-    //  fill(48, 165, 184);
-    //  rect(128, 95, 280, 45);
-    //  fill(100,100,100);
-    // text("Original Photo", 128, height/8);
-    //PImage source = loadImage("source.png");
-    //image(source,0,height/4);
-    //textSize(40);
-    //fill(48, 165, 184);
-    //rect(width/6, 800, 700, 150);
-    //rect(40,800,100,150);
-    //fill(0,0,0);
-    //text("Please type what you wish to encrpyt.", width/5, 840);
-    //text("What you encrypt will be shown", width/5, 880);
-    //text("on the right. Press enter when done!", width/5, 920);
-    //textSize(20);
-    //text("Mode:", 45, 840);
-    //text("encryption", 45, 860);
-    //textSize(40);
-    //}
-    //if(MODE==ENCRYPTER){
-    //  fill(48, 165, 184);
-    //  rect(128, 95, 280, 45);
-    //  fill(100,100,100);
-    // text("Uploaded Photo", 128, height/8);
-    //PImage output = loadImage("output.png");
-    //image(output,0,height/4);
-    //textSize(40);
-    //fill(48, 165, 184);
-    //rect(width/6, 800, 700, 150);
-    //rect(40,800,100,150);
-    //fill(0,0,0);
-    //text("Please press enter to get decrypted", width/5, 840);
-    //text("message", width/5, 880);
-    //textSize(20);
-    //text("Mode:", 45, 840);
-    //text("decryption", 45, 860);
-    //textSize(40);
-    //}
-    //if(MODE==CREATOR){
-    // fill(48,165,184);
-    // rect(128,95,280,45);
-    // fill(100,100,100);
-    // text("placeholder", 128, height/8);
-    // PImage newImage = createImage(512,512,RGB);
-    // image(newImage,0,height/4);
-    // textSize(40);
-    // fill(48,165,184);
-    // rect(width/6, 800, 700, 150);
-    // rect(40,800,100,150);
-    // fill(0,0,0);
-    // text("PLACEHOLDER", width/5, 840);
-    // text("PLACEHOLDER", width/5, 880);
-    // textSize(20);
-    // text("Mode:", 45, 840); 
-    // text("CREATOR", 45, 860);
-    // textSize(40);
-    //}
-  }
-  
   
   if(keyPressed && key == ENTER){
-    //println(MODE);
+    println(clicked);
+    println("-");
+    if(clicked == false){
+     return;
+    }
+    else{
+    
     if(MODE == ENCRYPTER){
       println("encrypt");
       image(fromStringToPicture(loadImage("source.png")), 512, height/4);
@@ -214,6 +159,9 @@ void draw(){
      image(createImage(canvas), 512, height/4);
      
     }
+    
+  } //this one
+  
   }
 
 }
