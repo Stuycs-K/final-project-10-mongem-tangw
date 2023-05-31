@@ -210,9 +210,6 @@ void draw(){
     }
     if(MODE==CREATOR){
      println("creator"); 
-     PImage canvas = createImage(512,512,RGB);
-     image(createImage(canvas), 512, height/4);
-     
     }
   }
 
