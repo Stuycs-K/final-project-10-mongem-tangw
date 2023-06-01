@@ -59,3 +59,7 @@ started new CREATOR mode which creates an image based on input text (did not upl
 ### 5/30/2023
 
 Fixed UI issue where mode selection was out of order
+
+### 5/31/2023
+
+Added clicked? boolean that makes sure code does not accidendally break if ENTER is pressed before a mode is selected. Working on bugs, need to be implemented
