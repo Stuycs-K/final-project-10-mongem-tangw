@@ -23,6 +23,14 @@ Was at the national debate tournament in Kentucky and was unable to work on the 
 
 Got up to date with the project, played around with the user interface, and outlined a problem with the UI that I will work on tomorrow.
 
+### 5/30/23
+
+Moved around logic for the user interface, changed background of the project
+
+### 5/31/23
+
+Worked with Matthew to fix user interface so it's functioning for the MVP, and outlined the demo presentation + practiced. Created demo branch
+
 
 ## Matthew
 
