@@ -55,3 +55,7 @@ cleaned UI and edited confusing test
 ### 5/29/2023
 
 started new CREATOR mode which creates an image based on input text (did not upload to main)
+
+### 5/30/2023
+
+Fixed UI issue where mode selection was out of order
