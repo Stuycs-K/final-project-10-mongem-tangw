@@ -29,7 +29,7 @@ Moved around logic for the user interface, changed background of the project
 
 ### 5/31/23
 
-Worked with Matthew to fix user interface so it's functioning for the MVP, and outlined the demo presentation + practiced. Created demo branch
+Worked with Matthew to fix user interface so it's functioning for the MVP, and outlined the demo presentation + practiced. Created demo branch, hid Creator method and fixed typos so the project MVP is ready to present. Updated main and demo as well.
 
 
 ## Matthew
