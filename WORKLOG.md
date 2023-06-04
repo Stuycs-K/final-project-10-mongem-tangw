@@ -31,6 +31,10 @@ Moved around logic for the user interface, changed background of the project
 
 Worked with Matthew to fix user interface so it's functioning for the MVP, and outlined the demo presentation + practiced. Created demo branch, hid Creator method and fixed typos so the project MVP is ready to present. Updated main and demo as well.
 
+### 6/4/23
+
+Diagrammed out a new user interface. Will implement in class tomorrow.
+
 
 ## Matthew
 
