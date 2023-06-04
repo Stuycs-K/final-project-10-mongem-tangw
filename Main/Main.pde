@@ -2,7 +2,7 @@ int ENCRYPTER = 0;
 int DECRYPTER = 1;
 //int CREATOR = 2;
 int MODE = 0;
-int DECRYPTLENGTH = 50;
+int DECRYPTLENGTH = 200;
 Boolean clicked = false;
 
 void setup(){
