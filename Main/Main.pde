@@ -7,12 +7,16 @@ Boolean clicked = false;
 
 void setup(){
   size(1024,1024);
-  textSize(40);
-  fill(100,100,100);
-  text("Please click mouse button", width/4, 900);
+  // Home page setup
+  // 
+  textSize(250);
+  rect(200, 300, 600, 400);
+  fill(50,50,100);
+  text("PLAY", 240, height/2);
 }
 
 void mouseClicked(){
+  textSize(40);
   println(clicked);
   if(!clicked){
     clicked = true;
