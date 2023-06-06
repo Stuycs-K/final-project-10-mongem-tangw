@@ -35,6 +35,10 @@ Worked with Matthew to fix user interface so it's functioning for the MVP, and o
 
 Diagrammed out a new user interface. Will implement in class tomorrow.
 
+### 6/5/23
+
+We were the first group to volunteer to demo our MVP in class. Outside of class, I made a plan for the user interface features that I'd like to create by the end of this week. I set deadlines for each section and made a detailed plan of action. I started on making the home screen for the project.
+
 
 ## Matthew
 
