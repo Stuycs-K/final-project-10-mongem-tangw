@@ -11,6 +11,30 @@ started to rewrite CS plan
 
 updated keyPressed method, redrafted methods in plan
 
+### 5/24/23
+
+created fromStringtoPicture method and ran it successfully in main
+
+### 5/25/23 - 5/28/23
+
+Was at the national debate tournament in Kentucky and was unable to work on the final project :(
+
+### 5/29/23
+
+Got up to date with the project, played around with the user interface, and outlined a problem with the UI that I will work on tomorrow.
+
+### 5/30/23
+
+Moved around logic for the user interface, changed background of the project
+
+### 5/31/23
+
+Worked with Matthew to fix user interface so it's functioning for the MVP, and outlined the demo presentation + practiced. Created demo branch, hid Creator method and fixed typos so the project MVP is ready to present. Updated main and demo as well.
+
+### 6/4/23
+
+Diagrammed out a new user interface. Will implement in class tomorrow.
+
 
 ## Matthew
 
@@ -21,7 +45,7 @@ started to rewrite CS plan
 
 ### 5/23/23
 
-added onto decrpyter class with lastNineRGB method, added and uploaded testing image, and edited main to compile
+added onto decrypter class with lastNineRGB method, added and uploaded testing image, and edited main to compile
 
 ### 5/24/23
 
@@ -36,3 +60,18 @@ expanded draw() method by creating a UI, easier for the user to use and interact
 created a algorithm within keypressed and draw that print out what the user wishes to encrpyt as they are writing it
 cleaned up print statements
 
+### 5/26/23
+
+cleaned UI and edited confusing test
+
+### 5/29/2023
+
+started new CREATOR mode which creates an image based on input text (did not upload to main)
+
+### 5/30/2023
+
+Fixed UI issue where mode selection was out of order
+
+### 5/31/2023
+
+Added clicked? boolean that makes sure code does not accidendally break if ENTER is pressed before a mode is selected. Working on bugs, need to be implemented
