@@ -8,11 +8,27 @@ Boolean clicked = false;
 void setup(){
   size(1024,1024);
   // Home page setup
-  // 
-  textSize(250);
-  rect(200, 300, 600, 400);
+  
+  // Title of project
+  rect(200, 200, 600, 200);
   fill(50,50,100);
-  text("PLAY", 240, height/2);
+  textSize(100);
+  text("Codebreaker", 220, 330);
+  
+  // Play button
+  fill(255);
+  rect(200, 450, 275, 100);
+  fill(50,50,100);
+  textSize(50);
+  text("Play", 290, 520);
+  
+  // Instructions button
+  fill(255);
+  rect(525, 450, 275, 100);
+  fill(50,50,100);
+  textSize(50);
+  text("Instructions", 540, 520);
+  
 }
 
 void mouseClicked(){
