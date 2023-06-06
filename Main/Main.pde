@@ -84,7 +84,7 @@ void mouseClicked(){
 }
 
 void keyPressed(){
-  if(MODE==ENCRYPTER){
+  if(MODE==ENCRYPTER || MODE==CREATOR){
   // This ends the message once ENTER is hit
   if (!typed){
     if (key != ENTER){
