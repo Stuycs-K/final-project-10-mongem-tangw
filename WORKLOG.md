@@ -83,3 +83,11 @@ Fixed UI issue where mode selection was out of order
 ### 5/31/2023
 
 Added clicked? boolean that makes sure code does not accidendally break if ENTER is pressed before a mode is selected. Working on bugs, need to be implemented
+
+### 6/5/2023
+
+Finished UI, finalized Creator mode and uploaded/merged to demo
+
+### 6/6/2023
+
+Edited failed merge from yesterday, started split+combine classes in matthew-testing branch
