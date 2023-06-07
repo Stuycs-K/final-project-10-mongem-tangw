@@ -41,29 +41,13 @@ void mouseClicked() {
     (mouseY >= 450 && mouseY <= 550)) {
     clicked = true;
     MODE = CHOOSE;
-    background(100);
-  }
-  // Open up the CHOOSE page with the 4 buttons
-  if (MODE == CHOOSE) {
-    // Button for ENCRYPTER
-    fill(255);
-    rect(50, 450, 250, 100);
-    fill(50, 50, 100);
-    textSize(50);
-    text("Encrypter", 60, 520);
-
-    // Button for DECRYPTER
-
-
-    // Button for CREATOR
-
-
-    // Button for LOCK & KEY
-
-
-    //MODE+=1;
-    //if (MODE==3)
-    //  MODE=0;
+    background(0);
+  } 
+  // Open up the three separate pages
+  else if (MODE == 0) {
+    MODE+=1;
+    if (MODE==3)
+      MODE=0;
   }
   println(MODE + "");
 
