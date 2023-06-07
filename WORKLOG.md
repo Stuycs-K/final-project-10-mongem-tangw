@@ -39,6 +39,10 @@ Diagrammed out a new user interface. Will implement in class tomorrow.
 
 We were the first group to volunteer to demo our MVP in class. Outside of class, I made a plan for the user interface features that I'd like to create by the end of this week. I set deadlines for each section and made a detailed plan of action. I started on making the home screen for the project.
 
+### 6/6/23
+
+Divided up remaining work in class with Matthew. Tested demo class and worked together on Matthew's computer in class. At home, played around with the Creator class to test functionality and thought about integration into new user interface.
+
 
 ## Matthew
 
