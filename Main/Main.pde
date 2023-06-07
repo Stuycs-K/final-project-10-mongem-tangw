@@ -40,7 +40,7 @@ void mouseClicked(){
     text("on the right. Press enter when done!", width/5, 920);
     textSize(20);
     text("Mode:", 45, 840);
-    text("encryption", 45, 860);
+    text("Encryption", 45, 860);
     textSize(40);
     }
     if(MODE==DECRYPTER){
@@ -59,14 +59,14 @@ void mouseClicked(){
     text("message", width/5, 880);
     textSize(20);
     text("Mode:", 45, 840);
-    text("decryption", 45, 860);
+    text("Decryption", 45, 860);
     textSize(40);
     }
     if(MODE==CREATOR){
      fill(48,165,184);
      rect(128,95,280,45);
      fill(100,100,100);
-     text("placeholder", 128, height/8);
+     text("New Photo", 128, height/8);
      PImage newImage = createImage(512,512,RGB);
      image(newImage,0,height/4);
      textSize(40);
@@ -74,11 +74,12 @@ void mouseClicked(){
      rect(width/6, 800, 700, 150);
      rect(40,800,100,150);
      fill(0,0,0);
-     text("PLACEHOLDER", width/5, 840);
-     text("PLACEHOLDER", width/5, 880);
+     text("Please type what you wish to encrypt.", width/5, 840);
+    text("What you encrypt will be shown", width/5, 880);
+    text("on the right. Press enter when done!", width/5, 920);
      textSize(20);
      text("Mode:", 45, 840); 
-     text("CREATOR", 45, 860);
+     text("Creator", 45, 860);
      textSize(40);
     }
 }
@@ -91,7 +92,7 @@ void keyPressed(){
       input += key;
       textSize(20);
       fill(48,165,194);
-      rect(524, height/4, 512,512);
+      rect(512, height/4, 512,512);
       fill(0,0,0);
       if(input.length()>33){
       text(input.substring(0, 33), 530, (height/4)+20); 
@@ -139,7 +140,7 @@ void draw(){
       String result = imageToString(loadImage("output.png"), DECRYPTLENGTH);
       textSize(20);
       fill(48,165,194);
-      rect(524, height/4, 512,512);
+      rect(512, height/4, 512,512);
       fill(0,0,0);
       if(result.length()>33){
       text(result.substring(0, 33), 530, (height/4)+20); 
@@ -158,6 +159,11 @@ void draw(){
      println("creator"); 
      PImage canvas = createImage(512,512,RGB);
      image(createImage(canvas), 512, height/4);
+     textSize(40);
+     fill(100,100,100);
+     text("Encrypted Photo", 640, height/8);
+     text("Saved as \"output.png\"", 640, height/8+40);
+     text("in your processing files", 640, height/8+80);
      
     }
     
