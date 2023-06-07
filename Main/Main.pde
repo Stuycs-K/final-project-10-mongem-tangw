@@ -10,6 +10,7 @@ void setup(){
   textSize(40);
   fill(100,100,100);
   text("Please click mouse button", width/4, 900);
+  //println(offset("abcdef", 1));
 }
 
 void mouseClicked(){
