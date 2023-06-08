@@ -47,18 +47,33 @@ void mouseClicked() {
   if (MODE == CHOOSE) {
     // Button for ENCRYPTER
     fill(255);
-    rect(50, 450, 250, 100);
+    rect(20, 450, 230, 100);
     fill(50, 50, 100);
     textSize(50);
-    text("Encrypter", 60, 520);
+    text("Encrypter", 30, 520);
 
     // Button for DECRYPTER
+    fill(255);
+    rect(270, 450, 230, 100);
+    fill(50, 50, 100);
+    textSize(50);
+    text("Decrypter", 280, 520);
 
 
     // Button for CREATOR
+    fill(255);
+    rect(520, 450, 230, 100);
+    fill(50, 50, 100);
+    textSize(50);
+    text("Creator", 550, 520);
 
 
     // Button for LOCK & KEY
+    fill(255);
+    rect(770, 450, 234, 100);
+    fill(50, 50, 100);
+    textSize(50);
+    text("Lock & Key", 774, 520);
 
 
     //MODE+=1;
