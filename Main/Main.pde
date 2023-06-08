@@ -164,7 +164,6 @@ void draw(){
      text("Encrypted Photo", 640, height/8);
      text("Saved as \"output.png\"", 640, height/8+40);
      text("in your processing files", 640, height/8+80);
-     
     }
     
   } //this one
