@@ -2,13 +2,14 @@ int HOME = -1;
 int CHOOSE = 0;
 int ENCRYPTER = 1;
 int DECRYPTER = 2;
-//int CREATOR = 3;
+int CREATOR = 3;
 int MODE = -1;
 int DECRYPTLENGTH = 200;
 Boolean clicked = false;
 
 void setup() {
   size(1024, 1024);
+  MODE = HOME;
   // Home page setup
 
   // Title of project
@@ -46,132 +47,24 @@ void mouseClicked() {
 
   // Open up the CHOOSE page with the 4 buttons
   if (MODE == CHOOSE) {
-    // Title that says "CHOOSE YOUR MODE"
-    fill(255);
-    rect(width/4, 200, 512, 200);
-    fill(50, 50, 100);
-    textSize(80);
-    text("CHOOSE YOUR", 265, 285);
-    text("MODE", 400, 375);
-
-    // Button for ENCRYPTER
-    fill(255);
-    rect(20, 500, 230, 100);
-    fill(50, 50, 100);
-    textSize(50);
-    text("Encrypter", 30, 570);
-
-    // Button for DECRYPTER
-    fill(255);
-    rect(270, 500, 230, 100);
-    fill(50, 50, 100);
-    textSize(50);
-    text("Decrypter", 280, 570);
-
-
-    // Button for CREATOR
-    fill(255);
-    rect(520, 500, 230, 100);
-    fill(50, 50, 100);
-    textSize(50);
-    text("Creator", 550, 570);
-
-
-    // Button for LOCK & KEY
-    fill(255);
-    rect(770, 500, 234, 100);
-    fill(50, 50, 100);
-    textSize(50);
-    text("Lock & Key", 774, 570);
-
-    //----------Clicking on the button---------------
-    // Y-coordinates for the mouse is the same range for all the buttons
-    if (mouseY >= 500 && mouseY <= 600) {
-      // Encrypter mode
-      if (mouseX >= 20 && mouseX <= 250){
-        MODE = ENCRYPTER;
-        background(100);
-      }
-      // Decrypter mode
-      else if (mouseX >= 270 && mouseX <= 500) {
-        MODE = DECRYPTER;
-        background(100);
-      }
-      // Creator mode
-      else if (mouseX >= 520 && mouseX <= 750) {
-        //MODE = CREATOR;
-        background(100);
-      }
-      // Lock & Key mode
-      else if (mouseX >= 770 && mouseX <= 1004) {
-        //MODE = LOCK & KEY;
-        background(100);
-      }
-    }
+    // Cleaned up method by moving implementation to a separate file
+    chooseMode();
   }
-  println(MODE + "");
+  println("The mode is: " + MODE);
 
   // ENCRYPTER MODE
   if (MODE==ENCRYPTER) {
-    fill(48, 165, 184);
-    rect(128, 95, 280, 45);
-    fill(100, 100, 100);
-    text("Original Photo", 128, height/8);
-    PImage source = loadImage("source.png");
-    image(source, 0, height/4);
-    textSize(40);
-    fill(48, 165, 184);
-    rect(width/6, 800, 700, 150);
-    rect(40, 800, 100, 150);
-    fill(0, 0, 0);
-    text("Please type what you wish to encrypt.", width/5, 840);
-    text("What you encrypt will be shown", width/5, 880);
-    text("on the right. Press enter when done!", width/5, 920);
-    textSize(20);
-    text("Mode:", 45, 840);
-    text("encryption", 45, 860);
-    textSize(40);
+    toEncrypt();
   }
 
   // DECRYPTER MODE
   if (MODE==DECRYPTER) {
-    fill(48, 165, 184);
-    rect(128, 95, 280, 45);
-    fill(100, 100, 100);
-    text("Uploaded Photo", 128, height/8);
-    PImage output = loadImage("output.png");
-    image(output, 0, height/4);
-    textSize(40);
-    fill(48, 165, 184);
-    rect(width/6, 800, 700, 150);
-    rect(40, 800, 100, 150);
-    fill(0, 0, 0);
-    text("Please press enter to get decrypted", width/5, 840);
-    text("message", width/5, 880);
-    textSize(20);
-    text("Mode:", 45, 840);
-    text("decryption", 45, 860);
-    textSize(40);
+    toDecrypt();
   }
-  //if(MODE==CREATOR){
-  // fill(48,165,184);
-  // rect(128,95,280,45);
-  // fill(100,100,100);
-  // text("placeholder", 128, height/8);
-  // PImage newImage = createImage(512,512,RGB);
-  // image(newImage,0,height/4);
-  // textSize(40);
-  // fill(48,165,184);
-  // rect(width/6, 800, 700, 150);
-  // rect(40,800,100,150);
-  // fill(0,0,0);
-  // text("PLACEHOLDER", width/5, 840);
-  // text("PLACEHOLDER", width/5, 880);
-  // textSize(20);
-  // text("Mode:", 45, 840);
-  // text("CREATOR", 45, 860);
-  // textSize(40);
-  //}
+  // CREATOR MODE
+  if (MODE==CREATOR) {
+    toCreate();
+  }
 }
 
 void keyPressed() {
@@ -244,16 +137,16 @@ void draw() {
         }
       }
 
-      //if (MODE==CREATOR) {
-      //  println("creator");
-      //  PImage canvas = createImage(512, 512, RGB);
-      //  image(createImage(canvas), 512, height/4);
-      //  textSize(40);
-      //  fill(100, 100, 100);
-      //  text("Encrypted Photo", 640, height/8);
-      //  text("Saved as \"output.png\"", 640, height/8+40);
-      //  text("in your processing files", 640, height/8+80);
-      //}
-    } //this one
+      if (MODE==CREATOR) {
+        println("creator");
+        PImage canvas = createImage(512, 512, RGB);
+        image(createImage(canvas), 512, height/4);
+        textSize(40);
+        fill(100, 100, 100);
+        text("Encrypted Photo", 640, height/8);
+        text("Saved as \"output.png\"", 640, height/8+40);
+        text("in your processing files", 640, height/8+80);
+      }
+    }
   }
 }
