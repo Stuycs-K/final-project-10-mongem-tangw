@@ -91,3 +91,7 @@ Finished UI, finalized Creator mode and uploaded/merged to demo
 ### 6/6/2023
 
 Edited failed merge from yesterday, started split+combine classes in matthew-testing branch
+
+### 6/7/2023
+
+Finished code for Lock+Key mode, (old split+combine), will work on implementing into main
