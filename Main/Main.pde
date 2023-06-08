@@ -33,6 +33,8 @@ void setup() {
   text("Instructions", 540, 520);
 }
 
+
+//----------------------------------------------------------
 void mouseClicked() {
   textSize(40);
   println("Clicked yet: "+clicked);
@@ -68,11 +70,10 @@ void mouseClicked() {
 }
 
 void keyPressed() {
-  if (MODE==ENCRYPTER) {
-    //  || MODE==CREATOR){    -- uncomment this out and add to previous statement as OR function.
+  if (MODE==ENCRYPTER || MODE==CREATOR) {
     // This ends the message once ENTER is hit
     if (!typed) {
-      if (key != ENTER) {
+      if ((key != ENTER) && (key != BACKSPACE)) {
         input += key;
         textSize(20);
         fill(48, 165, 194);
@@ -88,6 +89,9 @@ void keyPressed() {
         } else {
           text(input, 530, (height/4)+20);
         }
+      }
+      if (key == BACKSPACE){
+        
       }
     }
     // DO something with the String after enter

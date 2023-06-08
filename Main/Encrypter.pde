@@ -42,6 +42,7 @@ PImage fromStringToPicture(PImage source) {
   return output;
 }
 
+
 // Called in main
 void toEncrypt() {
   fill(48, 165, 184);
