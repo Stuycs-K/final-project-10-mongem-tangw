@@ -43,6 +43,10 @@ We were the first group to volunteer to demo our MVP in class. Outside of class,
 
 Divided up remaining work in class with Matthew. Tested demo class and worked together on Matthew's computer in class. At home, played around with the Creator class to test functionality and thought about integration into new user interface.
 
+### 6/7/23
+
+Finished basic home screen for the project. Started working on the CHOOSE OPTION page with the different buttons, and tried animating the Creator method.
+
 
 ## Matthew
 
