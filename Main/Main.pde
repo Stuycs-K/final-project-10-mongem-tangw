@@ -43,9 +43,9 @@ void mouseClicked() {
     MODE = CHOOSE;
     background(100);
   }
+
   // Open up the CHOOSE page with the 4 buttons
   if (MODE == CHOOSE) {
-    
     // Title that says "CHOOSE YOUR MODE"
     fill(255);
     rect(width/4, 200, 512, 200);
@@ -53,7 +53,7 @@ void mouseClicked() {
     textSize(80);
     text("CHOOSE YOUR", 265, 285);
     text("MODE", 400, 375);
-    
+
     // Button for ENCRYPTER
     fill(255);
     rect(20, 500, 230, 100);
@@ -84,10 +84,30 @@ void mouseClicked() {
     textSize(50);
     text("Lock & Key", 774, 570);
 
-
-    //MODE+=1;
-    //if (MODE==3)
-    //  MODE=0;
+    //----------Clicking on the button---------------
+    // Y-coordinates for the mouse is the same range for all the buttons
+    if (mouseY >= 500 && mouseY <= 600) {
+      // Encrypter mode
+      if (mouseX >= 20 && mouseX <= 250){
+        MODE = ENCRYPTER;
+        background(100);
+      }
+      // Decrypter mode
+      else if (mouseX >= 270 && mouseX <= 500) {
+        MODE = DECRYPTER;
+        background(100);
+      }
+      // Creator mode
+      else if (mouseX >= 520 && mouseX <= 750) {
+        //MODE = CREATOR;
+        background(100);
+      }
+      // Lock & Key mode
+      else if (mouseX >= 770 && mouseX <= 1004) {
+        //MODE = LOCK & KEY;
+        background(100);
+      }
+    }
   }
   println(MODE + "");
 
@@ -204,7 +224,7 @@ void draw() {
         text("Saved as \"output.png\"", 640, height/8+40);
         text("in your processing files", 640, height/8+80);
       }
-      
+
       if (MODE == DECRYPTER) {
         println("decrypt");
         String result = imageToString(loadImage("output.png"), DECRYPTLENGTH);
@@ -234,7 +254,6 @@ void draw() {
       //  text("Saved as \"output.png\"", 640, height/8+40);
       //  text("in your processing files", 640, height/8+80);
       //}
-      
     } //this one
   }
 }
