@@ -5,5 +5,5 @@ PImage createImage(PImage canvas){
     canvas.pixels[i] = randomColor;
   }
   updatePixels();
-  return fromStringToPicture(canvas);
+  return fromStringToPicture(canvas, input);
 }

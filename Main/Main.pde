@@ -129,7 +129,7 @@ void draw(){
     
     if(MODE == ENCRYPTER){
       println("encrypt");
-      image(fromStringToPicture(loadImage("source.png")), 512, height/4);
+      image(fromStringToPicture(loadImage("source.png"), input), 512, height/4);
       textSize(40);
      fill(100,100,100);
      text("Encrypted Photo", 640, height/8);
