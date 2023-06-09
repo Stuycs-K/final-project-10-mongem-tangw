@@ -1,6 +1,7 @@
 int ENCRYPTER = 0;
 int DECRYPTER = 1;
 int CREATOR = 2;
+int SPLIT = 3;
 int MODE = 0;
 int DECRYPTLENGTH = 50;
 Boolean clicked = false;
@@ -11,6 +12,8 @@ void setup(){
   fill(100,100,100);
   text("Please click mouse button", width/4, 900);
   //println(offset("abcdef", 1));
+  println(imageToString(loadImage("key.png"), 20));
+  println(imageToString(loadImage("locked.png"), 20));
 }
 
 void mouseClicked(){
@@ -20,7 +23,7 @@ void mouseClicked(){
   }
   else{
  MODE+=1;
- if(MODE==3)
+ if(MODE==4)
  MODE=0;
   }
    println(MODE + "");
@@ -83,10 +86,15 @@ void mouseClicked(){
      text("Creator", 45, 860);
      textSize(40);
     }
+    if(MODE == SPLIT){
+        println("splitter!!!");
+       
+        
+    }
 }
 
 void keyPressed(){
-  if(MODE==ENCRYPTER || MODE==CREATOR){
+  if(MODE==ENCRYPTER || MODE==CREATOR || MODE==SPLIT){
   // This ends the message once ENTER is hit
   if (!typed){
     if (key != ENTER){
@@ -129,7 +137,9 @@ void draw(){
     
     if(MODE == ENCRYPTER){
       println("encrypt");
-      image(fromStringToPicture(loadImage("source.png"), input), 512, height/4);
+      PImage editedEncrypted = fromStringToPicture(loadImage("source.png"), input);
+      image(editedEncrypted, 512, height/4);
+      editedEncrypted.save("output.png");
       textSize(40);
      fill(100,100,100);
      text("Encrypted Photo", 640, height/8);
@@ -159,13 +169,18 @@ void draw(){
     if(MODE==CREATOR){
      println("creator"); 
      PImage canvas = createImage(512,512,RGB);
-     image(createImage(canvas), 512, height/4);
+     image(creatorImage(canvas), 512, height/4);
      textSize(40);
      fill(100,100,100);
+     canvas.save("output.png");
      text("Encrypted Photo", 640, height/8);
      text("Saved as \"output.png\"", 640, height/8+40);
      text("in your processing files", 640, height/8+80);
      
+    }
+    if(MODE==SPLIT){
+     PImage source = loadImage("source.png");
+        Lock(source); 
     }
     
   } //this one

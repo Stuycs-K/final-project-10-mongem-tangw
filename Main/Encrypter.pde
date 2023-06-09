@@ -36,8 +36,6 @@
       changeNineRGB(source, i, text.charAt(j));
       j++;
     }
-    PImage output = createImage(source.width, source.height, RGB);
-    output = source.get();
-    output.save("output.png");
-    return output;
+    //source.save("output.png");
+    return source;
   }

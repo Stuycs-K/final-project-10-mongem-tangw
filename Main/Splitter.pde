@@ -10,12 +10,14 @@ void Lock(PImage source){
     current = (char) unbinary(currentBinary);
     offset += current;
   }
-  fromStringToPicture(source, offset);
+  println(offset);
+  fromStringToPicture(source, offset).save("locked.png");
   String lock = "";
   for(int i = 0; i < key.length; i++){
     lock += key[i];
   }
-  fromStringToPicture(source, lock);
+  println(lock);
+  fromStringToPicture(source, lock).save("key.png");
 }
 
 String offset(String x, int offset){
