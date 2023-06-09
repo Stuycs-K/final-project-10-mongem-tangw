@@ -12,8 +12,10 @@ void setup(){
   fill(100,100,100);
   text("Please click mouse button", width/4, 900);
   //println(offset("abcdef", 1));
+  //println( offset(  offset("abcdef", 1), 5)   );
   println(imageToString(loadImage("key.png"), 20));
   println(imageToString(loadImage("locked.png"), 20));
+  putKeyInLock(loadImage("key.png"),loadImage("locked.png"),20);
 }
 
 void mouseClicked(){
