@@ -4,7 +4,7 @@
 
 ### 5/22/23
 
-created decrpyter class, keyPressed branch, wrote keyPressed method
+created decrypter class, keyPressed branch, wrote keyPressed method
 started to rewrite CS plan
 
 ### 5/23/23
@@ -46,6 +46,10 @@ Divided up remaining work in class with Matthew. Tested demo class and worked to
 ### 6/7/23
 
 Finished basic home screen for the project. Started working on the CHOOSE OPTION page with the different buttons, and tried animating the Creator method.
+
+### 6/8/23
+
+Finished home page, finished choose mode page, started working on backspace and enter methods.
 
 
 ## Matthew
