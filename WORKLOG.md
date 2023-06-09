@@ -103,3 +103,7 @@ Edited failed merge from yesterday, started split+combine classes in matthew-tes
 ### 6/7/2023
 
 Finished code for Lock+Key mode, (old split+combine), will work on implementing into main
+
+### 6/7/2023
+
+Rewrote fromStringToImage so its more easily adapted to other modes that arent encryption. Started lock mode to decrypt images made in key mode.
