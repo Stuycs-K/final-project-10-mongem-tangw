@@ -107,3 +107,7 @@ Finished code for Lock+Key mode, (old split+combine), will work on implementing 
 ### 6/8/2023
 
 Rewrote fromStringToImage so its more easily adapted to other modes that arent encryption. Started lock mode to decrypt images made in key mode.
+
+### 6/9/2023
+
+Finished lock and key method, fixed issue where I cast a char as an int
