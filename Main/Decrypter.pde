@@ -36,12 +36,14 @@ void toDecrypt() {
   textSize(40);
   fill(48, 165, 184);
   rect(width/6, 800, 700, 150);
-  rect(40, 800, 100, 150);
+   // Second rectangle
+  rect(40, 800, 100, 70);
   fill(0, 0, 0);
   text("Please press enter to get decrypted", width/5, 840);
   text("message", width/5, 880);
+  // Bottom left mode
   textSize(20);
-  text("Mode:", 45, 840);
-  text("Decryption", 45, 860);
+  text("Mode:", 45, 830);
+  text("Decryption", 45, 850);
   textSize(40);
 }
