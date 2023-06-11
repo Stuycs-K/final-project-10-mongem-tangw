@@ -98,8 +98,25 @@ void keyPressed() {
           text(input, 530, (height/4)+20);
         }
       }
+      // Delete a letter
       if (key == BACKSPACE) {
+        input = input.substring(0, input.length()-1);
+        textSize(20);
+        fill(48, 165, 194);
+        rect(512, height/4, 512, 512);
+        fill(0, 0, 0);
+        if (input.length()>33) {
+          text(input.substring(0, 33), 530, (height/4)+20);
+          int limit = (input.length() % 33);
+          for (int i = 1; i < input.length()/33; i++) {
+            text(input.substring(33*i, (33*i)+33), 530, (height/4)+(20*i)+20);
+          }
+          text(input.substring(input.length()-limit, input.length()), 530, (height/4)+(input.length()/33)*(20)+20);
+        } else {
+          text(input, 530, (height/4)+20);
+        }
       }
+      // Capitalization
     }
     // DO something with the String after enter
     if (key == ENTER) {
