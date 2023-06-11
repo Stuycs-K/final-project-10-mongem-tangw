@@ -81,7 +81,7 @@ void keyPressed() {
   if (MODE==ENCRYPTER || MODE==CREATOR) {
     // This ends the message once ENTER is hit
     if (!typed) {
-      if ((key != ENTER) && (key != BACKSPACE)) {
+      if ((key != ENTER) && (key != BACKSPACE) && (key != SHIFT)) {
         input += key;
         textSize(20);
         fill(48, 165, 194);
@@ -117,6 +117,9 @@ void keyPressed() {
         }
       }
       // Capitalization
+      if (key == SHIFT){
+        
+      }
     }
     // DO something with the String after enter
     if (key == ENTER) {
