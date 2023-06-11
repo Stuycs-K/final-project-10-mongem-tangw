@@ -91,7 +91,7 @@ void mouseClicked() {
 }
 
 void keyPressed() {
-  if (MODE==ENCRYPTER || MODE==CREATOR || MODE==SPLIT) {
+  if ((MODE==ENCRYPTER || MODE==CREATOR || MODE==SPLIT) && !( key == TAB || key == ESC || key == DELETE || key == CODED)) {
     // This ends the message once ENTER is hit
     if (!typed) {
       if ((key != ENTER) && (key != BACKSPACE)) {
@@ -111,7 +111,27 @@ void keyPressed() {
           text(input, 530, (height/4)+20);
         }
       }
-      if (key == BACKSPACE) {
+      // Delete a letter
+      if (key == BACKSPACE && input.length()!=0) {
+        input = input.substring(0, input.length()-1);
+        textSize(20);
+        fill(48, 165, 194);
+        rect(512, height/4, 512, 512);
+        fill(0, 0, 0);
+        if (input.length()>33) {
+          text(input.substring(0, 33), 530, (height/4)+20);
+          int limit = (input.length() % 33);
+          for (int i = 1; i < input.length()/33; i++) {
+            text(input.substring(33*i, (33*i)+33), 530, (height/4)+(20*i)+20);
+          }
+          text(input.substring(input.length()-limit, input.length()), 530, (height/4)+(input.length()/33)*(20)+20);
+        } else {
+          text(input, 530, (height/4)+20);
+        }
+      }
+      // Capitalization
+      if (keyCode == SHIFT){
+        println("what???");
       }
     }
     // DO something with the String after enter
@@ -120,6 +140,7 @@ void keyPressed() {
       //println();
     }
   }
+  println(key);
 }
 
 
