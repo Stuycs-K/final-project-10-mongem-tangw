@@ -45,5 +45,15 @@ void toDecrypt() {
   textSize(20);
   text("Mode:", 45, 830);
   text("Decryption", 45, 850);
-  textSize(40);
+  // Back button
+  fill(48, 165, 184);
+  rect(40, 880, 100, 70);
+  fill(0, 0, 0);
+  text("Back to", 50, 910);
+  text("modes", 50, 930);
+  // When click on back button
+  if ((mouseX >= 40 && mouseX <= 140) && (mouseY >= 880 && mouseY <= 950)){
+    MODE = CHOOSE;
+    mouseClicked();
+  }
 }

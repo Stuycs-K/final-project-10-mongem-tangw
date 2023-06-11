@@ -1,4 +1,5 @@
 void chooseMode() {
+  background(100);
   // Title that says "CHOOSE YOUR MODE"
   fill(255);
   rect(width/4, 200, 512, 200);

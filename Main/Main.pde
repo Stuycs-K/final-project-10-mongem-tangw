@@ -56,17 +56,22 @@ void mouseClicked() {
 
   // ENCRYPTER MODE
   if (MODE==ENCRYPTER) {
+    background(100);
     toEncrypt();
   }
 
   // DECRYPTER MODE
   if (MODE==DECRYPTER) {
+    background(100);
     toDecrypt();
   }
   // CREATOR MODE
   if (MODE==CREATOR) {
+    background(100);
     toCreate();
   }
+  // LOCK & KEY
+  // ADD HERE
 }
 
 void keyPressed() {
