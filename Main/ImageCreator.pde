@@ -1,15 +1,16 @@
-PImage createImage(PImage canvas) {
+PImage creatorImage(PImage canvas) {
   loadPixels();
-  for (int i = 0; i < input.length(); i++) {
+  for (int i = 0; i < canvas.width*canvas.height; i++) {
     color randomColor = color(random(255), random(255), random(255));
     canvas.pixels[i] = randomColor;
   }
   updatePixels();
-  return fromStringToPicture(canvas);
+  return fromStringToPicture(canvas, input);
 }
 
 // Called in main
 void toCreate() {
+  textSize(40);
   background(100);
   fill(48, 165, 184);
   rect(128, 95, 280, 45);

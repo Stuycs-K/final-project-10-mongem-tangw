@@ -29,22 +29,23 @@ void changeNineRGB(PImage source, int position, char input) {
   //println("end");
 }
 
-PImage fromStringToPicture(PImage source) {
-  int stop = 3*input.length();
+PImage fromStringToPicture(PImage source, String text) {
+  int stop = 3*text.length();
   int j=0;
   for (int i=0; i<stop; i+=3) {
-    changeNineRGB(source, i, input.charAt(j));
+    changeNineRGB(source, i, text.charAt(j));
     j++;
   }
-  PImage output = createImage(source.width, source.height, RGB);
-  output = source.get();
-  output.save("output.png");
-  return output;
+  //PImage output = createImage(source.width, source.height, RGB);
+  //output = source.get();
+  //output.save("output.png");
+  return source;
 }
 
 
 // Called in main
 void toEncrypt() {
+  textSize(40);
   background(100);
   fill(48, 165, 184);
   rect(128, 95, 280, 45);

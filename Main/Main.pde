@@ -3,6 +3,8 @@ int CHOOSE = 0;
 int ENCRYPTER = 1;
 int DECRYPTER = 2;
 int CREATOR = 3;
+int SPLIT = 4;
+int COMBINE = 5;
 int MODE = -1;
 int DECRYPTLENGTH = 200;
 Boolean clicked = false;
@@ -77,12 +79,19 @@ void mouseClicked() {
   if (MODE==CREATOR && menu) {
     toCreate();
   }
-  // LOCK & KEY
-  // ADD HERE
+  // LOCK
+  if (MODE==SPLIT) {
+    toSplit();
+  }
+
+  //KEY
+  if (MODE==COMBINE) {
+    toCombine();
+  }
 }
 
 void keyPressed() {
-  if (MODE==ENCRYPTER || MODE==CREATOR) {
+  if (MODE==ENCRYPTER || MODE==CREATOR || MODE==SPLIT) {
     // This ends the message once ENTER is hit
     if (!typed) {
       if ((key != ENTER) && (key != BACKSPACE)) {
@@ -108,7 +117,7 @@ void keyPressed() {
     // DO something with the String after enter
     if (key == ENTER) {
       typed = true;
-      //println(input);
+      //println();
     }
   }
 }
@@ -125,7 +134,9 @@ void draw() {
 
       if (MODE == ENCRYPTER) {
         println("encrypt");
-        image(fromStringToPicture(loadImage("source.png")), 512, height/4);
+        PImage editedEncrypted = fromStringToPicture(loadImage("source.png"), input);
+        image(editedEncrypted, 512, height/4);
+        editedEncrypted.save("output.png");
         textSize(40);
         fill(100, 100, 100);
         text("Encrypted Photo", 640, height/8);
@@ -155,12 +166,53 @@ void draw() {
       if (MODE==CREATOR) {
         println("creator");
         PImage canvas = createImage(512, 512, RGB);
-        image(createImage(canvas), 512, height/4);
+        image(creatorImage(canvas), 512, height/4);
         textSize(40);
         fill(100, 100, 100);
+        canvas.save("output.png");
         text("Encrypted Photo", 640, height/8);
         text("Saved as \"output.png\"", 640, height/8+40);
         text("in your processing files", 640, height/8+80);
+      }
+      if (MODE==SPLIT) {
+        PImage source = loadImage("source.png");
+        Lock(source);
+        PImage lock = loadImage("locked.png");
+        image(lock, 0, height/4);
+        PImage key = loadImage("key.png");
+        image(key, 512, height/4);
+        fill(48, 165, 184);
+        rect(128, 95, 280, 45);
+        fill(0, 0, 0);
+        textSize(40);
+        text("Lock", 128, height/8);
+        fill(48, 165, 184);
+        rect(640, 95, 280, 45);
+        fill(0, 0, 0);
+        textSize(40);
+        text("Key", 640, height/8);
+      }
+      if (MODE==COMBINE) {
+        String resultKey = putKeyInLock(loadImage("key.png"), loadImage("locked.png"), DECRYPTLENGTH);
+        textSize(40);
+        fill(48, 165, 184);
+        rect(640, 95, 280, 45);
+        fill(0, 0, 0);
+        text("Decrypted Message", 640, height/8);
+        textSize(20);
+        fill(48, 165, 194);
+        rect(512, height/4, 512, 512);
+        fill(0, 0, 0);
+        if (resultKey.length()>33) {
+          text(resultKey.substring(0, 33), 530, (height/4)+20);
+          int limit = (resultKey.length() % 33);
+          for (int i = 1; i < resultKey.length()/33; i++) {
+            text(resultKey.substring(33*i, (33*i)+33), 530, (height/4)+(20*i)+20);
+          }
+          text(resultKey.substring(resultKey.length()-limit, resultKey.length()), 530, (height/4)+(resultKey.length()/33)*(20)+20);
+        } else {
+          text(resultKey, 530, (height/4)+20);
+        }
       }
     }
   }

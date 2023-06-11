@@ -27,6 +27,7 @@ String imageToString(PImage output, int stringLength) {
 
 // Called in main
 void toDecrypt() {
+  textSize(40);
   background(100);
   fill(48, 165, 184);
   rect(128, 95, 280, 45);
