@@ -10,6 +10,7 @@ PImage createImage(PImage canvas) {
 
 // Called in main
 void toCreate() {
+  background(100);
   fill(48, 165, 184);
   rect(128, 95, 280, 45);
   fill(100, 100, 100);
@@ -36,7 +37,7 @@ void toCreate() {
   text("Back to", 50, 910);
   text("modes", 50, 930);
   // When click on back button
-  if ((mouseX >= 40 && mouseX <= 140) && (mouseY >= 880 && mouseY <= 950)){
+  if ((mouseX >= 40 && mouseX <= 140) && (mouseY >= 880 && mouseY <= 950)) {
     MODE = CHOOSE;
     mouseClicked();
   }

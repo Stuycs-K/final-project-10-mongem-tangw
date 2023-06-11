@@ -27,6 +27,7 @@ String imageToString(PImage output, int stringLength) {
 
 // Called in main
 void toDecrypt() {
+  background(100);
   fill(48, 165, 184);
   rect(128, 95, 280, 45);
   fill(100, 100, 100);
@@ -36,7 +37,7 @@ void toDecrypt() {
   textSize(40);
   fill(48, 165, 184);
   rect(width/6, 800, 700, 150);
-   // Second rectangle
+  // Second rectangle
   rect(40, 800, 100, 70);
   fill(0, 0, 0);
   text("Please press enter to get decrypted", width/5, 840);
@@ -52,7 +53,7 @@ void toDecrypt() {
   text("Back to", 50, 910);
   text("modes", 50, 930);
   // When click on back button
-  if ((mouseX >= 40 && mouseX <= 140) && (mouseY >= 880 && mouseY <= 950)){
+  if ((mouseX >= 40 && mouseX <= 140) && (mouseY >= 880 && mouseY <= 950)) {
     MODE = CHOOSE;
     mouseClicked();
   }

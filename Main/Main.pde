@@ -39,6 +39,12 @@ void mouseClicked() {
   textSize(40);
   println("Clicked yet: "+clicked);
 
+  // If the user clicks on the INSTRUCTIONS button
+  if (!clicked && (MODE == HOME) && (mouseX >= 525 && mouseX <= 800) &&
+    (mouseY >= 450 && mouseY <= 550)) {
+    link("https://github.com/Stuycs-K/final-project-10-mongem-tangw/blob/main/README.md");
+  }
+
   // Only start it if user clicks on the PLAY button
   if (!clicked && (MODE == HOME) && (mouseX >= 200 && mouseX <= 475) &&
     (mouseY >= 450 && mouseY <= 550)) {
@@ -56,18 +62,15 @@ void mouseClicked() {
 
   // ENCRYPTER MODE
   if (MODE==ENCRYPTER) {
-    background(100);
     toEncrypt();
   }
 
   // DECRYPTER MODE
   if (MODE==DECRYPTER) {
-    background(100);
     toDecrypt();
   }
   // CREATOR MODE
   if (MODE==CREATOR) {
-    background(100);
     toCreate();
   }
   // LOCK & KEY
@@ -95,8 +98,7 @@ void keyPressed() {
           text(input, 530, (height/4)+20);
         }
       }
-      if (key == BACKSPACE){
-        
+      if (key == BACKSPACE) {
       }
     }
     // DO something with the String after enter
