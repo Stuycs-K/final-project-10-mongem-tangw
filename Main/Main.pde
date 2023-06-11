@@ -6,6 +6,7 @@ int CREATOR = 3;
 int MODE = -1;
 int DECRYPTLENGTH = 200;
 Boolean clicked = false;
+Boolean menu = false;
 
 void setup() {
   size(1024, 1024);
@@ -51,26 +52,29 @@ void mouseClicked() {
     clicked = true;
     MODE = CHOOSE;
     background(100);
+    println(menu);
   }
 
   // Open up the CHOOSE page with the 4 buttons
   if (MODE == CHOOSE) {
     // Cleaned up method by moving implementation to a separate file
     chooseMode();
+    menu = true;
+    println(menu);
   }
   println("The mode is: " + MODE);
 
   // ENCRYPTER MODE
-  if (MODE==ENCRYPTER) {
+  if (MODE==ENCRYPTER && menu) {
     toEncrypt();
   }
 
   // DECRYPTER MODE
-  if (MODE==DECRYPTER) {
+  if (MODE==DECRYPTER && menu) {
     toDecrypt();
   }
   // CREATOR MODE
-  if (MODE==CREATOR) {
+  if (MODE==CREATOR && menu) {
     toCreate();
   }
   // LOCK & KEY

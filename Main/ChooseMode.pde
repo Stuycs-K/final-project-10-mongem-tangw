@@ -40,7 +40,7 @@ void chooseMode() {
 
   //----------Clicking on the button---------------
   // Y-coordinates for the mouse is the same range for all the buttons
-  if (mouseY >= 500 && mouseY <= 600) {
+  if (mouseY >= 500 && mouseY <= 600 && MODE == CHOOSE && menu) {
     // Encrypter mode
     if (mouseX >= 20 && mouseX <= 250) {
       MODE = ENCRYPTER;
