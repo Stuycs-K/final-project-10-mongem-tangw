@@ -105,7 +105,7 @@ void keyPressed() {
   if ((MODE==ENCRYPTER || MODE==CREATOR || MODE==SPLIT) && !( key == TAB || key == ESC || key == DELETE || key == CODED)) {
     // This ends the message once ENTER is hit
     if (!typed) {
-      if ((key != ENTER) && (key != BACKSPACE) && (key != SHIFT)) {
+      if ((key != ENTER) && (key != BACKSPACE)) {
         input += key;
         PFont font = loadFont("TimesNewRomanPS-BoldItalicMT-48.vlw");
         textFont(font);
@@ -126,14 +126,6 @@ void keyPressed() {
         }
       }
       // Delete a letter
-<<<<<<< HEAD
-      if (key == BACKSPACE) {
-        input = input.substring(0, input.length()-1);
-        textSize(20);
-        fill(48, 165, 194);
-        rect(512, height/4, 512, 512);
-        fill(0, 0, 0);
-=======
       if (key == BACKSPACE && input.length()!=0) {
         input = input.substring(0, input.length()-1);
         PFont font = loadFont("TimesNewRomanPS-BoldItalicMT-48.vlw");
@@ -143,7 +135,6 @@ void keyPressed() {
         stroke(0, 143, 17);
         rect(512, height/4, 512, 512);
         fill(0, 143, 17);
->>>>>>> b404c127e458b60f691a6cf6edee305f10974409
         if (input.length()>33) {
           text(input.substring(0, 33), 530, (height/4)+20);
           int limit = (input.length() % 33);
@@ -156,13 +147,8 @@ void keyPressed() {
         }
       }
       // Capitalization
-<<<<<<< HEAD
-      if (key == SHIFT){
-        
-=======
       if (keyCode == SHIFT) {
         //println("what???");
->>>>>>> b404c127e458b60f691a6cf6edee305f10974409
       }
     }
     // DO something with the String after enter
@@ -171,14 +157,11 @@ void keyPressed() {
       input = "";  // Reset the input
       if (MODE == SPLIT) {
         println("lock.png and key.png are now saved in your sketch folder!");
-      }
-      else if (MODE == ENCRYPTER){
+      } else if (MODE == ENCRYPTER) {
+        println("output.png is now saved in your sketch folder!");
+      } else if (MODE == CREATOR) {
         println("output.png is now saved in your sketch folder!");
       }
-      else if (MODE == CREATOR){
-        println("output.png is now saved in your sketch folder!");
-      }
-
     }
     textFont(loadFont("ProcessingSans-Regular-48.vlw"));
   }
