@@ -1,6 +1,7 @@
 
 String input = "";
 Boolean typed = false;
+Boolean imageSelected = false;
 
 
 
@@ -24,6 +25,15 @@ String imageToString(PImage output, int stringLength) {
   }
   return result;
 }
+
+void fileSelected(File selection) {
+  if (selection == null) {
+    println("Window was closed or the user hit cancel.");
+  } else {
+    println("User selected " + selection.getAbsolutePath());
+  }
+}
+
 
 // Called in main
 void toDecrypt() {
@@ -57,6 +67,10 @@ void toDecrypt() {
     fill(0, 143, 17);
     text("Back to", 50, 910);
     text("modes", 50, 930);
+    // Pop up select output feature
+    selectInput("Replace the output.png file in the data folder with the one in main, then rerun this program!","fileSelected");
+    println("Replace the output.png file in the data folder with the one in main, then rerun this program!");
+    // Keep clean
     first = false;
   }
   // When click on back button
@@ -66,4 +80,11 @@ void toDecrypt() {
     typed=false;
     mouseClicked();
   }
+}
+
+// Helped method for toDecrypt
+void uploadPhoto(File selection){
+
+
+
 }

@@ -51,7 +51,7 @@ void setup() {
 //----------------------------------------------------------
 void mouseClicked() {
   textSize(40);
-  println("Clicked yet: "+clicked);
+  //println("Clicked yet: "+clicked);
 
   // If the user clicks on the INSTRUCTIONS button
   if (!clicked && (MODE == HOME) && (mouseX >= 525 && mouseX <= 800) &&
@@ -65,7 +65,7 @@ void mouseClicked() {
 
     clicked = true;
     MODE = CHOOSE;
-    println(menu);
+    //println(menu);
   }
 
   // Open up the CHOOSE page with the 4 buttons
@@ -73,7 +73,7 @@ void mouseClicked() {
     // Cleaned up method by moving implementation to a separate file
     chooseMode();
     menu = true;
-    println(menu);
+    //println(menu);
   }
   println("The mode is: " + MODE);
 
@@ -148,31 +148,32 @@ void keyPressed() {
       }
       // Capitalization
       if (keyCode == SHIFT) {
-        println("what???");
+        //println("what???");
       }
     }
     // DO something with the String after enter
     if (key == ENTER) {
       typed = true;
+      input = "";  // Reset the input
       //println();
     }
     textFont(loadFont("ProcessingSans-Regular-48.vlw"));
   }
-  println(key);
+  //println(key);
 }
 
 
 void draw() {
 
   if (keyPressed && key == ENTER) {
-    println(clicked);
-    println("-");
+    //println(clicked);
+    //println("-");
     if (clicked == false) {
       return;
     } else {
 
       if (MODE == ENCRYPTER) {
-        println("encrypt");
+        println("Encrypting");
         PImage editedEncrypted = fromStringToPicture(loadImage("source.png"), input);
         image(editedEncrypted, 512, height/4);
         editedEncrypted.save("output.png");
@@ -188,7 +189,7 @@ void draw() {
       }
 
       if (MODE == DECRYPTER) {
-        println("decrypt");
+        println("Decrypting");
         String result = imageToString(loadImage("output.png"), DECRYPTLENGTH);
         fill(0);
         stroke(0, 143, 17);
@@ -211,7 +212,7 @@ void draw() {
       }
 
       if (MODE==CREATOR) {
-        println("creator");
+        println("Creating");
         PImage canvas = createImage(512, 512, RGB);
         image(creatorImage(canvas), 512, height/4);
         textSize(40);
