@@ -61,8 +61,9 @@ void toCombine() {
     text("Back to", 50, 910);
     text("modes", 50, 930);
     // Pop up select output feature
-    selectInput("Replace the lock.png and key.png files in the data folder with the ones in main, then rerun this program! Cancel this if you've already done it.", "fileSelected");
-    println("Replace the lock.png and key.png files in the data folder with the one in main, then rerun this program! Cancel this if you've already done it.");
+    // Pop up select output feature
+    selectInput("Replace the lock.png and key.png files in the data folder with the ones in main!","fileSelected");
+    println("Replace the lock.png and key.png files in the data folder with the ones in main!");
     // Keep clean
     first = false;
   }

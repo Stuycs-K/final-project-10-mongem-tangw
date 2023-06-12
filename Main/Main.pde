@@ -11,7 +11,8 @@ int MODE = -1;
 int DECRYPTLENGTH = 200;
 Boolean clicked = false;
 Boolean menu = false;
-boolean first = true;
+Boolean first = true;
+String input = "";
 
 void setup() {
   size(1024, 1024);
@@ -72,6 +73,7 @@ void mouseClicked() {
   if (MODE == CHOOSE) {
     // Cleaned up method by moving implementation to a separate file
     chooseMode();
+    input = "";
     menu = true;
     //println(menu);
   }
@@ -154,7 +156,6 @@ void keyPressed() {
     // DO something with the String after enter
     if (key == ENTER) {
       typed = true;
-      input = "";  // Reset the input
       if (MODE == SPLIT) {
         println("lock.png and key.png are now saved in your sketch folder!");
       }
@@ -195,6 +196,7 @@ void draw() {
         text("Encrypted Photo", 600, height/8);
         text("Saved as \"output.png\"", 600, height/8+40);
         text("in your processing files", 600, height/8+80);
+        //input = "";  // Reset the input
       }
 
       if (MODE == DECRYPTER) {
