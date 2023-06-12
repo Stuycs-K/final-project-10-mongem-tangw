@@ -155,7 +155,16 @@ void keyPressed() {
     if (key == ENTER) {
       typed = true;
       input = "";  // Reset the input
-      //println();
+      if (MODE == SPLIT) {
+        println("lock.png and key.png are now saved in your sketch folder!");
+      }
+      else if (MODE == ENCRYPTER){
+        println("output.png is now saved in your sketch folder!");
+      }
+      else if (MODE == CREATOR){
+        println("output.png is now saved in your sketch folder!");
+      }
+
     }
     textFont(loadFont("ProcessingSans-Regular-48.vlw"));
   }
@@ -173,7 +182,7 @@ void draw() {
     } else {
 
       if (MODE == ENCRYPTER) {
-        println("Encrypting");
+        //println("Encrypting...");
         PImage editedEncrypted = fromStringToPicture(loadImage("source.png"), input);
         image(editedEncrypted, 512, height/4);
         editedEncrypted.save("output.png");
@@ -189,7 +198,7 @@ void draw() {
       }
 
       if (MODE == DECRYPTER) {
-        println("Decrypting");
+        //println("Decrypting...");
         String result = imageToString(loadImage("output.png"), DECRYPTLENGTH);
         fill(0);
         stroke(0, 143, 17);
@@ -212,7 +221,7 @@ void draw() {
       }
 
       if (MODE==CREATOR) {
-        println("Creating");
+        //println("Creating...");
         PImage canvas = createImage(512, 512, RGB);
         image(creatorImage(canvas), 512, height/4);
         textSize(40);

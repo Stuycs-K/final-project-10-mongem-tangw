@@ -11,7 +11,7 @@ void Lock(PImage source) {
     offset += current;
   }
   println(offset);
-  fromStringToPicture(source, offset).save("locked.png");
+  fromStringToPicture(source, offset).save("lock.png");
   String lock = "";
   for (int i = 0; i < key.length; i++) {
     lock += key[i];
@@ -56,6 +56,7 @@ void toSplit() {
     fill(0, 143, 17);
     text("Back to", 50, 910);
     text("modes", 50, 930);
+    // Keep clean
     first = false;
   }
   // When click on back button

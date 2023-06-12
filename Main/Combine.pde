@@ -31,7 +31,7 @@ void toCombine() {
     rect(128, 95, 280, 45);
     fill(0, 143, 17);
     text("Uploaded Lock", 128, height/8);
-    PImage locked = loadImage("locked.png");
+    PImage locked = loadImage("lock.png");
     image(locked, 0, height/4);
     fill(0);
     stroke(0, 143, 17);
@@ -60,6 +60,10 @@ void toCombine() {
     fill(0, 143, 17);
     text("Back to", 50, 910);
     text("modes", 50, 930);
+    // Pop up select output feature
+    selectInput("Replace the output.png file in the data folder with the one in main, then rerun this program!","fileSelected");
+    println("Replace the output.png file in the data folder with the one in main, then rerun this program!");
+    // Keep clean
     first = false;
   }
   // When click on back button
