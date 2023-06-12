@@ -18,7 +18,7 @@ String putKeyInLock(PImage key, PImage lock, int stringLength) {
       result+= (char) unbinary(binary);
     }
   }
-  println(result);
+  println("The result is: "+result);
   return result;
 }
 
@@ -61,8 +61,8 @@ void toCombine() {
     text("Back to", 50, 910);
     text("modes", 50, 930);
     // Pop up select output feature
-    selectInput("Replace the output.png file in the data folder with the one in main, then rerun this program!","fileSelected");
-    println("Replace the output.png file in the data folder with the one in main, then rerun this program!");
+    selectInput("Replace the lock.png and key.png files in the data folder with the ones in main, then rerun this program! Cancel this if you've already done it.", "fileSelected");
+    println("Replace the lock.png and key.png files in the data folder with the one in main, then rerun this program! Cancel this if you've already done it.");
     // Keep clean
     first = false;
   }

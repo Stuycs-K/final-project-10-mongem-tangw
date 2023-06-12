@@ -237,7 +237,7 @@ void draw() {
       if (MODE==SPLIT) {
         PImage source = loadImage("source.png");
         Lock(source);
-        PImage lock = loadImage("locked.png");
+        PImage lock = loadImage("lock.png");
         image(lock, 0, height/4);
         PImage key = loadImage("key.png");
         image(key, 512, height/4);
@@ -255,7 +255,7 @@ void draw() {
         text("Key", 640, height/8);
       }
       if (MODE==COMBINE) {
-        String resultKey = putKeyInLock(loadImage("key.png"), loadImage("locked.png"), DECRYPTLENGTH);
+        String resultKey = putKeyInLock(loadImage("key.png"), loadImage("lock.png"), DECRYPTLENGTH);
         textSize(40);
         fill(0);
         stroke(0, 143, 17);
