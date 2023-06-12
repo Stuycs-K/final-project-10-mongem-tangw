@@ -196,7 +196,6 @@ void draw() {
         text("Encrypted Photo", 600, height/8);
         text("Saved as \"output.png\"", 600, height/8+40);
         text("in your processing files", 600, height/8+80);
-        //input = "";  // Reset the input
       }
 
       if (MODE == DECRYPTER) {
