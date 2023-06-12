@@ -1,9 +1,8 @@
 # APCS Final Project
 
 ## Group Info
-Matthew Monge.
-William Tang.
-Period 10.
+Matthew Monge, William Tang, Period 10.
+
 Group Name: Tangy Mango
 Project Name: Codebreaker
 
