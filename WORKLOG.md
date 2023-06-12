@@ -51,6 +51,24 @@ Finished basic home screen for the project. Started working on the CHOOSE OPTION
 
 Finished home page, finished choose mode page, started working on backspace and enter methods.
 
+### 6/9/23
+
+Internet wasn't working so wasn't able to commit any changes.
+
+### 6/10/23
+
+Cleaned up each mode in preparation for the back button.
+
+### 6/11/23
+
+Added back button to each mode.
+Linked the instruction button to Github ReadMe page.
+Fixed backspace in encrypter and creator methods.
+Fixed input bug in creator, encrypter, and decrypter.
+Added built-in file selection mechanism.
+Updated console print statements.
+Updated the user interface and moved the spacing of the rectangles around.
+
 
 ## Matthew
 
