@@ -1,3 +1,5 @@
+import processing.sound.*;
+SoundFile music;
 int HOME = -1;
 int CHOOSE = 0;
 int ENCRYPTER = 1;
@@ -9,29 +11,38 @@ int MODE = -1;
 int DECRYPTLENGTH = 200;
 Boolean clicked = false;
 Boolean menu = false;
+boolean first = true;
 
 void setup() {
   size(1024, 1024);
+  background(loadImage("matrix.png"));
   MODE = HOME;
   // Home page setup
+  music = new SoundFile(this, "bondtheme.wav");
+  music.loop();
+  //music setup
 
   // Title of project
+  fill(0);
+  stroke(0, 143, 17);
   rect(200, 200, 600, 200);
-  fill(50, 50, 100);
+  fill(0, 143, 17);
   textSize(100);
   text("Codebreaker", 225, 330);
 
   // Play button
-  fill(255);
+  fill(0);
+  stroke(0, 143, 17);
   rect(200, 450, 275, 100);
-  fill(50, 50, 100);
+  fill(0, 143, 17);
   textSize(50);
   text("Play", 290, 520);
 
   // Instructions button
-  fill(255);
+  fill(0);
+  stroke(0, 143, 17);
   rect(525, 450, 275, 100);
-  fill(50, 50, 100);
+  fill(0, 143, 17);
   textSize(50);
   text("Instructions", 540, 520);
 }
@@ -51,9 +62,9 @@ void mouseClicked() {
   // Only start it if user clicks on the PLAY button
   if (!clicked && (MODE == HOME) && (mouseX >= 200 && mouseX <= 475) &&
     (mouseY >= 450 && mouseY <= 550)) {
+
     clicked = true;
     MODE = CHOOSE;
-    background(100);
     println(menu);
   }
 
@@ -96,10 +107,13 @@ void keyPressed() {
     if (!typed) {
       if ((key != ENTER) && (key != BACKSPACE)) {
         input += key;
-        textSize(20);
-        fill(48, 165, 194);
+        PFont font = loadFont("TimesNewRomanPS-BoldItalicMT-48.vlw");
+        textFont(font);
+        textSize(22);
+        fill(0);
+        stroke(0, 143, 17);
         rect(512, height/4, 512, 512);
-        fill(0, 0, 0);
+        fill(0, 143, 17);
         if (input.length()>33) {
           text(input.substring(0, 33), 530, (height/4)+20);
           int limit = (input.length() % 33);
@@ -114,10 +128,13 @@ void keyPressed() {
       // Delete a letter
       if (key == BACKSPACE && input.length()!=0) {
         input = input.substring(0, input.length()-1);
-        textSize(20);
-        fill(48, 165, 194);
+        PFont font = loadFont("TimesNewRomanPS-BoldItalicMT-48.vlw");
+        textFont(font);
+        textSize(22);
+        fill(0);
+        stroke(0, 143, 17);
         rect(512, height/4, 512, 512);
-        fill(0, 0, 0);
+        fill(0, 143, 17);
         if (input.length()>33) {
           text(input.substring(0, 33), 530, (height/4)+20);
           int limit = (input.length() % 33);
@@ -130,7 +147,7 @@ void keyPressed() {
         }
       }
       // Capitalization
-      if (keyCode == SHIFT){
+      if (keyCode == SHIFT) {
         println("what???");
       }
     }
@@ -139,6 +156,7 @@ void keyPressed() {
       typed = true;
       //println();
     }
+    textFont(loadFont("ProcessingSans-Regular-48.vlw"));
   }
   println(key);
 }
@@ -158,20 +176,27 @@ void draw() {
         PImage editedEncrypted = fromStringToPicture(loadImage("source.png"), input);
         image(editedEncrypted, 512, height/4);
         editedEncrypted.save("output.png");
+        fill(0);
+        stroke(0, 143, 17);
+        rect(600, 95, 390, 125);
+        fill(0, 143, 17);
+        textFont(loadFont("ProcessingSans-Regular-48.vlw"));
         textSize(40);
-        fill(100, 100, 100);
-        text("Encrypted Photo", 640, height/8);
-        text("Saved as \"output.png\"", 640, height/8+40);
-        text("in your processing files", 640, height/8+80);
+        text("Encrypted Photo", 600, height/8);
+        text("Saved as \"output.png\"", 600, height/8+40);
+        text("in your processing files", 600, height/8+80);
       }
 
       if (MODE == DECRYPTER) {
         println("decrypt");
         String result = imageToString(loadImage("output.png"), DECRYPTLENGTH);
-        textSize(20);
-        fill(48, 165, 194);
+        fill(0);
+        stroke(0, 143, 17);
         rect(512, height/4, 512, 512);
-        fill(0, 0, 0);
+        fill(0, 143, 17);
+        PFont font = loadFont("TimesNewRomanPS-BoldItalicMT-48.vlw");
+        textFont(font);
+        textSize(20);
         if (result.length()>33) {
           text(result.substring(0, 33), 530, (height/4)+20);
           int limit = (result.length() % 33);
@@ -182,6 +207,7 @@ void draw() {
         } else {
           text(result, 530, (height/4)+20);
         }
+        textFont(loadFont("ProcessingSans-Regular-48.vlw"));
       }
 
       if (MODE==CREATOR) {
@@ -189,11 +215,14 @@ void draw() {
         PImage canvas = createImage(512, 512, RGB);
         image(creatorImage(canvas), 512, height/4);
         textSize(40);
-        fill(100, 100, 100);
+        fill(0);
+        stroke(0, 143, 17);
+        rect(600, 95, 390, 125);
+        fill(0, 143, 17);
         canvas.save("output.png");
-        text("Encrypted Photo", 640, height/8);
-        text("Saved as \"output.png\"", 640, height/8+40);
-        text("in your processing files", 640, height/8+80);
+        text("Encrypted Photo", 600, height/8);
+        text("Saved as \"output.png\"", 600, height/8+40);
+        text("in your processing files", 600, height/8+80);
       }
       if (MODE==SPLIT) {
         PImage source = loadImage("source.png");
@@ -202,28 +231,34 @@ void draw() {
         image(lock, 0, height/4);
         PImage key = loadImage("key.png");
         image(key, 512, height/4);
-        fill(48, 165, 184);
+        fill(0);
+        stroke(0, 143, 17);
         rect(128, 95, 280, 45);
-        fill(0, 0, 0);
+        fill(0, 143, 17);
         textSize(40);
         text("Lock", 128, height/8);
-        fill(48, 165, 184);
+        fill(0);
+        stroke(0, 143, 17);
         rect(640, 95, 280, 45);
-        fill(0, 0, 0);
+        fill(0, 143, 17);
         textSize(40);
         text("Key", 640, height/8);
       }
       if (MODE==COMBINE) {
         String resultKey = putKeyInLock(loadImage("key.png"), loadImage("locked.png"), DECRYPTLENGTH);
         textSize(40);
-        fill(48, 165, 184);
-        rect(640, 95, 280, 45);
-        fill(0, 0, 0);
+        fill(0);
+        stroke(0, 143, 17);
+        rect(640, 95, 330, 45);
+        fill(0, 143, 17);
         text("Decrypted Message", 640, height/8);
-        textSize(20);
-        fill(48, 165, 194);
+        fill(0);
+        stroke(0, 143, 17);
         rect(512, height/4, 512, 512);
-        fill(0, 0, 0);
+        fill(0, 143, 17);
+        PFont font = loadFont("TimesNewRomanPS-BoldItalicMT-48.vlw");
+        textFont(font);
+        textSize(20);
         if (resultKey.length()>33) {
           text(resultKey.substring(0, 33), 530, (height/4)+20);
           int limit = (resultKey.length() % 33);
@@ -234,6 +269,7 @@ void draw() {
         } else {
           text(resultKey, 530, (height/4)+20);
         }
+        textFont(loadFont("ProcessingSans-Regular-48.vlw"));
       }
     }
   }

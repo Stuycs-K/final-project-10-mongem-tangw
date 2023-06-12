@@ -45,36 +45,44 @@ PImage fromStringToPicture(PImage source, String text) {
 
 // Called in main
 void toEncrypt() {
-  textSize(40);
-  background(100);
-  fill(48, 165, 184);
-  rect(128, 95, 280, 45);
-  fill(100, 100, 100);
-  text("Original Photo", 128, height/8);
-  PImage source = loadImage("source.png");
-  image(source, 0, height/4);
-  textSize(40);
-  fill(48, 165, 184);
-  rect(width/6, 800, 700, 150);
-  // Second rectangle
-  rect(40, 800, 100, 70);
-  fill(0, 0, 0);
-  text("Please type what you wish to encrypt.", width/5, 840);
-  text("What you encrypt will be shown", width/5, 880);
-  text("on the right. Press enter when done!", width/5, 920);
-  // Bottom left mode
-  textSize(20);
-  text("Mode:", 45, 830);
-  text("Encryption", 45, 850);
-  // Back button
-  fill(48, 165, 184);
-  rect(40, 880, 100, 70);
-  fill(0, 0, 0);
-  text("Back to", 50, 910);
-  text("modes", 50, 930);
+  if (first) {
+    textSize(40);
+    background(loadImage("matrix.png"));
+    fill(0);
+    stroke(0, 143, 17);
+    rect(128, 95, 280, 45);
+    fill(0, 143, 17);
+    text("Original Photo", 128, height/8);
+    PImage source = loadImage("source.png");
+    image(source, 0, height/4);
+    textSize(40);
+    fill(0);
+    stroke(0, 143, 17);
+    rect(width/6, 800, 700, 150);
+    // Second rectangle
+    rect(40, 800, 100, 70);
+    fill(0, 143, 17);
+    text("Please type what you wish to encrypt.", width/5, 840);
+    text("What you encrypt will be shown", width/5, 880);
+    text("on the right. Press enter when done!", width/5, 920);
+    // Bottom left mode
+    textSize(20);
+    text("Mode:", 45, 830);
+    text("Encryption", 45, 850);
+    // Back button
+    fill(0);
+    stroke(0, 143, 17);
+    rect(40, 880, 100, 70);
+    fill(0, 143, 17);
+    text("Back to", 50, 910);
+    text("modes", 50, 930);
+    first = false;
+  }
   // When click on back button
   if ((mouseX >= 40 && mouseX <= 140) && (mouseY >= 880 && mouseY <= 950)) {
     MODE = CHOOSE;
+    first = true;
+    typed=false;
     mouseClicked();
   }
 }
