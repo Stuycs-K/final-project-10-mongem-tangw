@@ -158,14 +158,11 @@ void keyPressed() {
       typed = true;
       if (MODE == SPLIT) {
         println("lock.png and key.png are now saved in your sketch folder!");
-      }
-      else if (MODE == ENCRYPTER){
+      } else if (MODE == ENCRYPTER) {
+        println("output.png is now saved in your sketch folder!");
+      } else if (MODE == CREATOR) {
         println("output.png is now saved in your sketch folder!");
       }
-      else if (MODE == CREATOR){
-        println("output.png is now saved in your sketch folder!");
-      }
-
     }
     textFont(loadFont("ProcessingSans-Regular-48.vlw"));
   }

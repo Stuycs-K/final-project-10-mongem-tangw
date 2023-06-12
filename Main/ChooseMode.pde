@@ -24,7 +24,7 @@ void chooseMode() {
   rect(221, 500, 181, 100);
   fill(0, 143, 17);
   textSize(40);
-  text("Decrypter", 231, 570);
+  text("Decrypter", 230, 570);
 
 
   // Button for CREATOR
@@ -33,7 +33,7 @@ void chooseMode() {
   rect(422, 500, 181, 100);
   fill(0, 143, 17);
   textSize(40);
-  text("Creator", 432, 570);
+  text("Creator", 448, 570);
 
 
   // Button for LOCK
@@ -42,7 +42,7 @@ void chooseMode() {
   rect(623, 500, 181, 100);
   fill(0, 143, 17);
   textSize(40);
-  text("Lock", 633, 570);
+  text("Lock", 669, 570);
 
   // Button for KEY
   fill(0);
@@ -50,7 +50,7 @@ void chooseMode() {
   rect(824, 500, 181, 100);
   fill(0, 143, 17);
   textSize(40);
-  text("Key", 834, 570);
+  text("Key", 879, 570);
 
   //----------Clicking on the button---------------
   // Y-coordinates for the mouse is the same range for all the buttons
