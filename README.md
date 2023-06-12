@@ -1,9 +1,12 @@
 # APCS Final Project
 
 ## Group Info
-Matthew Monge
-William Tang
-Period 10
+Matthew Monge.
+William Tang.
+Period 10.
+Group Name: Tangy Mango
+Project Name: Codebreaker
+
 ## Overview
 Our project is an encryption codebreaking device that uses image steganography to hide messages in images. We have five modes: Encrypt, Decrypt, Creator, Lock, Key. Encrypt hides your message in a pre-existing image and saves the image to the sketch folder. Decrypt takes an image and reveals the message. Creator hides your message in a randomly generated image. Lock takes your message and hides it in two images. Key takes the two images and reveals the hidden message.
 
