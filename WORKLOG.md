@@ -111,3 +111,8 @@ Rewrote fromStringToImage so its more easily adapted to other modes that arent e
 ### 6/9/2023
 
 Finished lock and key method, fixed issue where I cast a char as an int
+
+### 6/11/2023
+
+Implemented and fully merged william and I's code. Refrubished UI and theme of the project, added music, fixed all (known) bugs. Ready for final product and merge to main
+
