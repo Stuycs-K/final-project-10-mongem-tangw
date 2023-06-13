@@ -46,7 +46,7 @@ The Key method does the opposite of the Lock method. It takes two images and com
 
 When you first open the Key page, a file selection mechanism will pop up. Click on the top bar that shows the folder you’re currently in and change it to “main.” Once you’re in main, move the “lock.png” and “key.png” files that were created by Lock into the “data” folder. Then press “Enter” to get the decrypted message.
 
-##DEV LOG
+### DEV LOG
 I. Working features:
 Image Encrypter
 Image Decrypter
