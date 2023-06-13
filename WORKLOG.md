@@ -139,7 +139,8 @@ Implemented and fully merged william and I's code. Refrubished UI and theme of t
 Dev Log 
 
 ### DEV LOG
-I. Working features:
+
+### I. Working features:
 
 Image Encrypter
 
@@ -156,13 +157,18 @@ Menu selection and UI
 File selection menu
 
 
-II. Bugs:
+### II. Bugs:
 
 These images MUST be in the data or processing folders for some code to function, for example
+
 Encrypter + Lock : REQUIRE "source.png" 
+
 Decrypter : REQUIRE "output.png"
+
 Key : REQUIRE "key.png" and "lock.png"
+
 Without these files, the code will crash and throw null exceptions.
+
 
 You may notice in our Decrypter and Key classes that the file selection mechanism only uploads the new images to the decryption part of the code, and doesn’t actually change the image that is shown on the screen. This results in a correct decrypted message, but an image that is not updated.
 At first, we planned on updating the image shown immediately after the file upload, but we ultimately decided to keep it the way it is now because we felt that it fit the theme of a hidden encryption/decryption device that keeps the actual workings ambiguous. To the user, it seems as if the image hasn’t changed, when in reality, the message has already been decrypted.
@@ -171,7 +177,7 @@ Sometimes, buttons take a few clicks to register being pressed. We think this ha
 
 Despite being an Image decrypter, it does not allow you to fully hide information from the federal government. We have tried. Did not work. Waiting for our subpoena.
 
-III. Helpful resources:
+### III. Helpful resources:
 
 https://www.mygreatlearning.com/blog/image-steganography-explained/
 
