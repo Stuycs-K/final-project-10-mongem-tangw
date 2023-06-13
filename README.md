@@ -48,13 +48,21 @@ When you first open the Key page, a file selection mechanism will pop up. Click 
 
 ### DEV LOG
 I. Working features:
+
 Image Encrypter
+
 Image Decrypter
+
 Image Creator
+
 Lock + Key Image Encrypter
+
 Working onscreen keyboard
+
 Menu selection and UI
+
 File selction menu
+
 
 II. Bugs:
 These images MUST be in the data or processing folders for some code to function, for example
