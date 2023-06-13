@@ -61,7 +61,7 @@ Working onscreen keyboard
 
 Menu selection and UI
 
-File selction menu
+File selection menu
 
 
 II. Bugs:
