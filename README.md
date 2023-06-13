@@ -46,49 +46,6 @@ The Key method does the opposite of the Lock method. It takes two images and com
 
 When you first open the Key page, a file selection mechanism will pop up. Click on the top bar that shows the folder you’re currently in and change it to “main.” Once you’re in main, move the “lock.png” and “key.png” files that were created by Lock into the “data” folder. Then press “Enter” to get the decrypted message.
 
-### DEV LOG
-I. Working features:
-
-Image Encrypter
-
-Image Decrypter
-
-Image Creator
-
-Lock + Key Image Encrypter
-
-Working onscreen keyboard
-
-Menu selection and UI
-
-File selection menu
-
-
-II. Bugs:
-
-These images MUST be in the data or processing folders for some code to function, for example
-Encrypter + Lock : REQUIRE "source.png" 
-Decrypter : REQUIRE "output.png"
-Key : REQUIRE "key.png" and "lock.png"
-Without these files, the code will crash and throw null exceptions.
-
-You may notice in our Decrypter and Key classes that the file selection mechanism only uploads the new images to the decryption part of the code, and doesn’t actually change the image that is shown on the screen. This results in a correct decrypted message, but an image that is not updated.
-At first, we planned on updating the image shown immediately after the file upload, but we ultimately decided to keep it the way it is now because we felt that it fit the theme of a hidden encryption/decryption device that keeps the actual workings ambiguous. To the user, it seems as if the image hasn’t changed, when in reality, the message has already been decrypted.
-
-Sometimes, buttons take a few clicks to register being pressed. We think this has to do with the speed at which theyre clicked, but its unclear.
-
-Despite being an Image decrypter, it does not allow you to fully hide information from the federal government. We have tried. Did not work. Waiting for our subpoena.
-
-III. Helpful resources:
-
-https://www.mygreatlearning.com/blog/image-steganography-explained/
-
-https://processing.org/reference/
-
-https://en.wikipedia.org/wiki/Steganography
-
-
-
 ## Final Note
 
 Overall, this project has been incredibly interesting, exciting, and a great learning experience, and we are both grateful to have had the freedom to explore a topic as niche as image steganography. Thank you Mr. K!
