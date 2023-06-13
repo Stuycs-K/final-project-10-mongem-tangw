@@ -65,6 +65,7 @@ File selection menu
 
 
 II. Bugs:
+
 These images MUST be in the data or processing folders for some code to function, for example
 Encrypter + Lock : REQUIRE "source.png" 
 Decrypter : REQUIRE "output.png"
@@ -78,7 +79,7 @@ Sometimes, buttons take a few clicks to register being pressed. We think this ha
 
 Despite being an Image decrypter, it does not allow you to fully hide information from the federal government. We have tried. Did not work. Waiting for our subpoena.
 
-III. Helpful resources
+III. Helpful resources:
 
 https://www.mygreatlearning.com/blog/image-steganography-explained/
 
