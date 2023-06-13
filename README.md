@@ -71,9 +71,13 @@ Sometimes, buttons take a few clicks to register being pressed. We think this ha
 Despite being an Image decrypter, it does not allow you to fully hide information from the federal government. We have tried. Did not work. Waiting for our subpoena.
 
 III. Helpful resources
+
 https://www.mygreatlearning.com/blog/image-steganography-explained/
+
 https://processing.org/reference/
+
 https://en.wikipedia.org/wiki/Steganography
+
 
 
 ## Final Note
